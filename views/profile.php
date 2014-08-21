@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <link rel="stylesheet" href="styles/styles.css"/>
-    <link rel="stylesheet" href="styles/profileStyles.css"/>
-    <meta charset="utf8">
-</head>
-<body>
-<header>
-    <img src="images/logo.png" alt="" class="logo"/>
-
-</header>
+<?php
+	include 'header.php';
+?>
 <main>
     <section>
         <header>
@@ -46,10 +36,7 @@
             </p>
         </div>
     </section>
-
-
 </main>
-
-<footer></footer>
-</body>
-</html>
+<?php
+	include 'footer.php';
+?>

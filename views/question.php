@@ -1,16 +1,7 @@
-<html>
-<head>
-    <title>Home Page</title>
-    <link rel="stylesheet" href="styles/styles.css"/>
-    <link rel="stylesheet" href="styles/questions.css"/>
-    <meta charset="utf8">
-</head>
-<body>
-<header>
-    <img src="images/logo.png" alt="" class="logo"/>
-</header>
+<?php
+	include 'header.php';
+?>
 <main>
-
     <section>
         <header>
             <h1>Topic: C++ VS C#</h1>
@@ -109,15 +100,7 @@
             </div>
         </article>
     </section>
-
-
 </main>
-
-<footer>
-
-    <p>Lace Fern Forums | Design By Team <span>"Lace Fern"</span> 2014</p>
-
-</footer>
-</body>
-</html>
-
+<?php
+	include 'footer.php';
+?>
