@@ -7,7 +7,6 @@
 <body>
     <header>
         <img src="images/logo.png" alt="" class="logo"/>
-
     </header>
     <main>
         <section>
@@ -23,9 +22,8 @@
 
         <section>
             <header>
-                <h1>GENERAL CATEGORY</h1>
+                <h1>LATEST QUESTIONS</h1>
             </header>
-
 
             <article>
                 <table>
@@ -78,7 +76,7 @@
 
         <section>
             <header>
-                <h1>NEW SAMPLE CATEGORY</h1>
+                <h1>HOT QUESTIONS</h1>
             </header>
             <?php require("php/article.php"); ?>
             <?php require("php/article.php"); ?>

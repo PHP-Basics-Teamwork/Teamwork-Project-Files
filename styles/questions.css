@@ -1,0 +1,66 @@
+main > section > article{
+    min-height: 110px;
+    max-height: none;
+}
+
+main > section{
+    margin-bottom: 0px;
+}
+
+.userHolder{
+    position: absolute;
+    display: inline-block;
+    width: 150px;
+    min-height: 200px;
+    margin-left: -30px;
+}
+
+.userHolder span{
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.messageHolder{
+    display: inline-block;
+    width:900px;
+    margin-left: 100px;
+    min-height: 200px;
+}
+
+.messageHolder h3, .messageHolder p{
+    text-align: left;
+}
+
+.messageHolder p{
+    font-size: 10px;
+}
+
+.messageHolder p span{
+    color:#2B9272;
+    cursor: default;
+}
+
+.messageHolder .message, .messageHolder .userSign{
+    margin-top: 15px;
+}
+
+.messageHolder .userSign {
+    border-top: 1px solid gray;
+    padding-top: 10px;
+
+
+}
+.messageHolder .message p, .messageHolder .userSign p{
+    text-align: justify;
+    font-size: 12px;
+}
+
+footer{
+    margin-top: 30px;
+}
+
+.userPic{
+    width: 70px;
+}

@@ -164,7 +164,11 @@ footer p span{
     font-size: 18px;
 }
 
-
+@-moz-document url-prefix() {
+    .imgHolder{
+        width: 50px;
+    }
+}
 
 
 
