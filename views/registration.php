@@ -1,6 +1,3 @@
-<?php
-	include 'header.php';
-?>
 <main>
     <section>
         <header>
@@ -54,8 +51,6 @@
         </form>
     </section>
 </main>
-<?php
-	include 'footer.php';
-?>
+
 
 

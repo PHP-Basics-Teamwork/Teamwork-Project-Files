@@ -1,6 +1,3 @@
-<?php
-	include 'header.php';
-?>
 <body>
     <header></header>
     <main>
@@ -35,6 +32,3 @@
             </article>
         </section>
     </main>
-<?php
-	include 'footer.php';
-?>
