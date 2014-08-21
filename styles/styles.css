@@ -95,6 +95,60 @@ main > section > article > table{
 
 }
 
+.statsTable{
+    width: 95%;
+}
+
+.statsTable td{
+    text-align: right;
+    font-size: 14px;
+
+}
+
+.topicTable{
+    margin-left: 10px;
+    width: 95%;
+}
+
+.topicTable tr td{
+    text-align: left;
+    font-size: 15px;
+}
+
+.topicTable tr td:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.topicTable tr:nth-child(2) td{
+    font-size: 13px;
+}
+
+.lastPostTable{
+    width: 95%;
+    margin-left: 10px;
+}
+
+.lastPostTable tr td{
+    text-align: left;
+    font-size: 15px;
+}
+
+.lastPostTable tr:nth-child(2) td{
+    font-size: 13px;
+}
+
+.lastPostTable tr td b{
+    cursor: pointer;
+}
+
+.lastPostTable tr td span{
+    color:#2B9272;
+    cursor: pointer;
+}
+
+
+
 main > section > article > table > tbody > tr > td, main > section > article > table > tbody > tr > th{
     border: 1px solid #DADCE2;
 }

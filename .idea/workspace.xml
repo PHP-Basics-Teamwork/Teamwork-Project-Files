@@ -26,7 +26,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="48" selection-start="899" selection-end="899" vertical-scroll-proportion="-18.961538" vertical-offset="34" max-vertical-offset="1156">
+            <state line="56" column="28" selection-start="1862" selection-end="2188" vertical-scroll-proportion="-13.730769" vertical-offset="595" max-vertical-offset="1887">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="article.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="20" selection-start="284" selection-end="284" vertical-scroll-proportion="0.2992" vertical-offset="0" max-vertical-offset="625">
+            <state line="33" column="49" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.5648" vertical-offset="208" max-vertical-offset="918">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="23" selection-start="949" selection-end="949" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1785">
+            <state line="141" column="20" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0" vertical-offset="1933" max-vertical-offset="2703">
               <folding />
             </state>
           </provider>
@@ -61,8 +61,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/styles.css" />
-        <option value="$PROJECT_DIR$/styles/styles.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/styles/styles.css" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/php/article.php" />
       </list>
@@ -175,7 +175,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -216,23 +216,23 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/styles/styles.css">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="23" selection-start="949" selection-end="949" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1785">
+        <state line="56" column="28" selection-start="1862" selection-end="2188" vertical-scroll-proportion="-13.730769" vertical-offset="595" max-vertical-offset="1887">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/styles/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="48" selection-start="899" selection-end="899" vertical-scroll-proportion="-18.961538" vertical-offset="34" max-vertical-offset="1156">
+        <state line="141" column="20" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0" vertical-offset="1933" max-vertical-offset="2703">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="20" selection-start="284" selection-end="284" vertical-scroll-proportion="0.2992" vertical-offset="0" max-vertical-offset="625">
+        <state line="33" column="49" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.5648" vertical-offset="208" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
