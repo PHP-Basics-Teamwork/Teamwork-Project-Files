@@ -16,7 +16,7 @@ main > section > #login > img{
 
 main > section > #login-art{
     width: 44%;
-    height: 200px;
+    height: 250px;
     padding: 15px;
 }
 
@@ -49,4 +49,12 @@ main > section > #login-art > form > ul > li > .submit{
     text-transform: uppercase;
     font-family: "Open Sans Condensed",sans-serif;
     font-size: 14px;
+}
+
+li:nth-child(1){
+    margin-left: -3px;
+}
+
+li:nth-child(3){
+    margin-left: -156px;
 }
