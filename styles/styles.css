@@ -92,7 +92,7 @@ main > section > article > table{
 
 .logo{
     width: 400px;
-
+    display: inline-block;
 }
 
 .statsTable{
@@ -163,3 +163,14 @@ footer p span{
     cursor: pointer;
     font-size: 18px;
 }
+
+
+
+
+
+
+
+
+
+
+
