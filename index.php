@@ -11,6 +11,5 @@
 	//else
 	//include('views/login.php');
 	
-	
 	include 'views/footer.php';
 ?>
