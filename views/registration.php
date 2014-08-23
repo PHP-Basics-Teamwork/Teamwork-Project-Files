@@ -3,7 +3,7 @@
         <header>
             <h1>registration</h1>
         </header>
-        <form action="Controller/usersController.php" method="post">
+        <form action="" method="post">
         <ul>
             <li>
                 <span class="userInfo">
@@ -33,7 +33,7 @@
                 <span class="userInfo">
                     <label for="confirmedEmail">Confirmed Email</label>
                 </span>
-                <input type="email" name="confirmedEmail" id="confirmedEmail"  required="required">
+                <input type="email" name="confirmEmail" id="confirmedEmail"  required="required">
             </li>
             <li>
                 <span class="userInfo">
@@ -45,14 +45,14 @@
                 <span class="userInfo">
                 <label for="repeatPassword">Repeat password</label>
                     </span>
-                <input type="password" name="repeatPassword" id="repeatPassword"  required="required">
+                <input type="password" name="confirmPassword" id="repeatPassword"  required="required">
             </li>
             <li>
                     <span class="userInfo">Gender</span>
                 <select name="gender">
-                    <option value="animal">Animal</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="3">Animal</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
                 </select>
             </li>
             <li id="buttons">

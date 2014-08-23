@@ -14,6 +14,39 @@ class User {
 
     private $password;
 
+    private $gender;
+
+    private $salt;
+
+    function __construct($userData = null) {
+
+        if(isset($userData['id'])){
+            $this->id = $userData['id'];
+        }
+        if(isset($userData['username'])){
+            $this->username = $userData['username'];
+        }
+        if(isset($userData['password'])){
+            $this->password = $userData['password'];
+        }
+        if(isset($userData['email'])){
+            $this->email = $userData['email'];
+        }
+        if(isset($userData['firstName'])){
+            $this->firstName = $userData['firstName'];
+        }
+        if(isset($userData['lastName'])){
+            $this->lastName = $userData['lastName'];
+        }
+        if(isset($userData['gender'])){
+            $this->gender = $userData['gender'];
+        }
+        if(isset($userData['salt'])){
+            $this->salt = $userData['salt'];
+        }
+
+    }
+
     /**
      * @param string email
      * @return User
@@ -121,4 +154,34 @@ class User {
     {
         return $this->username;
     }
+
+    /**
+     * @param int $genderId
+     */
+    public function setGender($genderId)
+    {
+        $this->gender = $genderId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSalt()
+    {
+        return $this->salt;
+    }
+
+    public function generateNewSalt(){
+        $this->salt = base_convert(sha1(uniqid(mt_rand(), true)), 16, 36);
+    }
+
+
 }

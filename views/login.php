@@ -10,11 +10,11 @@
             </header>
 
             <article id="login-art">
-                <form method="post">
+                <form method="post" action="">
                     <ul>
                         <li>
                             Username:
-                            <input type="text" name="login">
+                            <input type="text" name="username">
                         </li>
                         <li>
                             Password:
@@ -25,7 +25,7 @@
                             <input type="checkbox" name="checkbox">
                         </li>
                         <li>
-                            <input class="submit" type="submit" value="Login">
+                            <input class="submit" type="submit" name="login" value="Login">
                         </li>
                     </ul>
                 </form>

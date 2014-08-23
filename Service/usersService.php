@@ -1,6 +1,5 @@
 <?php
-
-    require_once('../Manager/usersManager.php');
+    require_once('Manager/usersManager.php');
 
     class UsersService{
 
@@ -10,17 +9,53 @@
             $this->manager = new UsersManager();
         }
 
-        function registerUser($userData){
-            $newUser = new User();
-            $newUser->setUsername($userData['username']);
-            $newUser->setFirstName($userData['firstName']);
-            $newUser->setLastName($userData['lastName']);
-            $newUser->setEmail($userData['email']);
+        function registerUser(User $user){
 
-            $password = sha1($userData['password']);
-            $newUser->setPassword($password);
+            $user->generateNewSalt();
+            $password = sha1($user->getPassword().$user->getSalt());
+            $user->setPassword($password);
 
-            $this->manager->registerUser($newUser);
+            $this->manager->registerUser($user);
+        }
+
+        function getUserByUsername($username){
+            return $this->manager->getUserByUsername($username);
+        }
+
+        function getUserByEmail($email){
+            return $this->manager->getUserByEmail($email);
+        }
+
+        function getUserBySessionKey($sessionKey){
+            return $this->manager->getUserBySessionKey($sessionKey);
+        }
+
+        function loginUser($username, $password){
+            $user = $this->manager->getUserByUsername($username);
+            $password = sha1($password.$user->getSalt());
+            $sessionKey = null;
+
+            if($user->getPassword() === $password){
+                $sessionKey = $this->generateSessionKey($user->getId());
+                $this->manager->changeUserSessionKey($user->getId(), $sessionKey);
+                $_SESSION['sessionKey'] = $sessionKey;
+            }
+
+            return $sessionKey;
+        }
+
+        function logoutUser(){
+            session_unset();
+        }
+
+        private function generateSessionKey($userId){
+            $sessionKeyChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            $sessionKey = $userId;
+            for($i = 0; $i < 50; $i++){
+                $sessionKey .= $sessionKeyChars[rand(0, strlen($sessionKeyChars) - 1)];
+            }
+
+            return $sessionKey;
         }
     }
 ?>

@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `forum`
 --
+CREATE DATABASE IF NOT EXISTS `forum` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `forum`;
 
 -- --------------------------------------------------------
 
@@ -42,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `gender` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `gender` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Схема на данните от таблица `gender`
@@ -50,7 +52,8 @@ CREATE TABLE IF NOT EXISTS `gender` (
 
 INSERT INTO `gender` (`id`, `gender`) VALUES
 (1, 'male'),
-(2, 'female');
+(2, 'female'),
+(3, 'Animal');
 
 -- --------------------------------------------------------
 
@@ -134,12 +137,23 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(100) NOT NULL,
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `gender_id` int(11) NOT NULL,
+  `salt` varchar(300) NOT NULL,
+  `session_key` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `username` (`username`),
   KEY `gender_id` (`gender_id`),
-  KEY `gender_id_2` (`gender_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+  KEY `session_key` (`session_key`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+
+--
+-- Схема на данните от таблица `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`, `password`, `gender_id`, `salt`, `session_key`) VALUES
+(8, 'gardax', 'gardax95@gmail.com', 'Georgi', 'Georgiev', 'd13ce3e2ffad97e5cb37a7f95472ac0a0f22f376', 1, 's1jnq6lbskgkc8s4s0ckkcwkgo8kk0c', '8ATJ0ZAS03JnMCdeZ6LsaM9os3IIQnUfgewndFM0je08xTYXlnF');
 
 --
 -- Ограничения за дъмпнати таблици

@@ -1,4 +1,5 @@
 <?php
+    require_once('Controller/usersController.php');
 
     include 'views/header.php';
     include('views/menu.php');
@@ -16,6 +17,12 @@
                 break;
             case "main":
                 include "views/main.php";
+                break;
+            case "logout":
+                logoutUser($userService);
+                break;
+            case "error":
+                include "views/error.php";
                 break;
             default:
                 header("Location: error.php");
