@@ -1,3 +1,4 @@
 <?php
-//configuration variables
+    define("DATABASE_USER", "root");
+    define("DATABASE_PASSWORD", "");
 ?>

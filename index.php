@@ -1,15 +1,29 @@
 <?php
-	//php logic
-	require 'config.php';
-	require 'manager.php';
-	require 'services.php';
 
-	include 'views/header.php';
-	//if loged
-	include('views/menu.php');
-	include('views/main.php');
-	//else
-	//include('views/login.php');
-	
-	include 'views/footer.php';
+    include 'views/header.php';
+    include('views/menu.php');
+
+    if(isset($_GET['page'])){
+        switch($_GET['page']){
+            case "login":
+                include 'views/login.php';
+                break;
+            case "register":
+                include 'views/registration.php';
+                break;
+            case "profile":
+                include 'views/profile.php';
+                break;
+            case "main":
+                include "views/main.php";
+                break;
+            default:
+                header("Location: error.php");
+        }
+    }
+    else{
+        include('views/main.php');
+    }
+
+    include 'views/footer.php';
 ?>
