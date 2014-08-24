@@ -493,3 +493,22 @@ footer{
     color: white;
     font-weight: bold;
 }
+#errorPage{
+    background: white;
+    border: 1px solid #DADCE2;
+    min-height: 400px;
+    margin-top: 3px;
+    padding-top: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+#errorPage > span{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 35px;
+    margin-left: 30px;
+    color: #C97702;
+    font-size: 25px;
+    font-family: "Fixedsys";
+}
