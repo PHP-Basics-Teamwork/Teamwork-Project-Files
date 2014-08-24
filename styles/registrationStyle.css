@@ -1,10 +1,20 @@
-h1{
+section > header > h1{
     text-transform: uppercase;
 }
-ul li{
+section > form > ul li{
     list-style-type: none;
+	
+	height: 40px;
+    width: 550px;
+    margin: 0 auto;
 }
-form{
+
+section > form > ul li > span{
+    display: inline-block;
+    font-weight: bold;
+    width: 300px;
+}
+section > form{
     padding-top: 30px;
     background: white;
     width: 100%;
@@ -12,17 +22,8 @@ form{
     margin: 0px auto;
     margin-bottom: 3px;
 }
-ul li{
-    height: 40px;
-    width: 550px;
-    margin: 0 auto;
-}
-ul li span{
-    display: inline-block;
-    font-weight: bold;
-    width: 300px;
-}
-input{
+
+section > form > ul > li > input{
     outline: none;
     padding: 3px;
     font-size: 18px;
@@ -30,18 +31,18 @@ input{
     height: 30px;
     width: 220px;
 }
-select{
+section > form > ul > li > select{
     outline: none;
     font-family: "Times New Roman", serif;
     font-size: 18px;
     height: 30px;
     width: 220px;
 }
-#buttons{
+section > form > ul > #buttons{
     width: 250px;
     margin: 25px auto;
 }
-button{
+section > form > ul > #buttons > button{
     outline: none;
     margin: 5px;
     color: white;
@@ -51,7 +52,7 @@ button{
     width: 100px;
     height: 30px;
 }
-button:hover{
+section > form > ul > #buttons > button:hover{
     background-color: rgba(43, 146, 114, 1);
     cursor: pointer;
 }

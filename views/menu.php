@@ -1,5 +1,7 @@
 <ul>
 	<li><a href="index.php?page=main">Home</a></li>
+	<li><a href="index.php?page=question">Question</a></li>
+	<li><a href="index.php?page=profiletemplate">Profile Example</a></li>
 	<?php
        if($user){
     ?>

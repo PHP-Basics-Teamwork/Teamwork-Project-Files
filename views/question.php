@@ -1,5 +1,5 @@
 <main>
-    <section>
+    <section class="messageSection">
         <header>
             <h1>Topic: C++ VS C#</h1>
         </header>
@@ -42,13 +42,13 @@
         </article>
     </section>
 
-    <section>
+    <section class="messageSection">
         <header>
             <h1>Answers</h1>
         </header>
     </section>
 
-    <section>
+    <section class="messageSection">
         <article>
             <div class="userHolder">
                 <h4>Ivan_54</h4>
@@ -73,7 +73,7 @@
         </article>
     </section>
 
-    <section>
+    <section class="messageSection">
         <article>
             <div class="userHolder">
                 <h4>Kireto</h4>

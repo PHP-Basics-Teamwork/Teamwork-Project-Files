@@ -1,5 +1,4 @@
 <body>
-    <header></header>
     <main>
 
         <section>

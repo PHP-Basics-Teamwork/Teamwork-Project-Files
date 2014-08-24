@@ -200,11 +200,261 @@ footer p span{
     padding-left: 620px;
 }
 
+main > section > header > h1{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 19px;
+}
+
+main > section > #login{
+    width: 44%;
+    margin: 0px auto;
+}
+
+main > section > #login > img{
+    float: left;
+    margin: 14px;
+}
+
+main > section > #login-art{
+    width: 44%;
+    height: 250px;
+    padding: 15px;
+}
+
+main > section > #login-art > form > ul{
+    list-style: none;
+    text-align: center;
+}
+
+main > section > #login-art > form > ul > li {
+    margin-top: 20px;
+    font-size: 115%;
+}
+
+main > section > #login-art > form > ul > li > input {
+    font-family: "Open Sans",sans-serif;
+    color: #444;
+    background: none repeat scroll 0% 0% #FFF;
+    border: 1px solid #6A6A6A;
+    padding: 4px;
+    font-size: 12px;
+}
+
+main > section > #login-art > form > ul > li > .submit{
+    background: none repeat scroll 0% 0% #454545;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: 700;
+    border: medium none;
+    padding: 3px 8px;
+    text-transform: uppercase;
+    font-family: "Open Sans Condensed",sans-serif;
+    font-size: 14px;
+}
+
+main > section > #login-art li:nth-child(1){
+    margin-left: -3px;
+}
+
+main > section > #login-art li:nth-child(3){
+    margin-left: -156px;
+}
+
+#basicinfo{
+	display: inline-block;
+    background: white;
+    width: 210px;
+    border: 1px solid #DADCE2;
+    min-height: 70px;
+    padding: 18px;
+	list-style-type:none;
+	position:absolute;
+}
+#basicinfo ul li{
+	 margin-bottom: 2px;
+}
+
+#basicinfo  > ul > li > h4{
+    font-size: 22px;
+}
+
+#basicinfo .postition{
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #3C3F50;
+}
+
+#basicinfo  img{
+    width: 100px;
+    height: 100px;
+}
+
+#basicinfo .showMore{
+    text-decoration: none;
+    color: #2B9272;
+}
+
+section > #aboutUser{
+    display: inline-block;
+    background: white;
+    border: 1px solid #DADCE2;
+    margin-left: 3px;
+    width: 833px;
+    padding: 25px;	
+	margin-left:217px;
+}
+
+section > #aboutUser  li{
+    margin-bottom: 7px;
+}
+section > #aboutUser ul{
+    padding-bottom: 15px;
+	list-style-type:none;
+}
+
+section > #aboutUser > ul > li > .profile-label{
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+}
+
+section > #aboutUser  > h6{
+    display: block;
+    border-top: solid 1px dimgray;
+    padding-top: 8px;
+}
+section > #aboutUser  > #signature{
+    padding: 10px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+section > header > h1{
+    text-transform: uppercase;
+}
+section > form > ul li{
+    list-style-type: none;
+	
+	height: 40px;
+    width: 550px;
+    margin: 0 auto;
+}
+
+section > form > ul li > span{
+    display: inline-block;
+    font-weight: bold;
+    width: 300px;
+}
+section > form{
+    padding-top: 30px;
+    background: white;
+    width: 100%;
+    border: 1px solid #DADCE2;
+    margin: 0px auto;
+    margin-bottom: 3px;
+}
+
+section > form  ul  li  input{
+    outline: none;
+    padding: 3px;
+    font-size: 18px;
+    font-family: "Times New Roman", serif;
+    height: 30px;
+    width: 220px;
+}
+section > form > ul > li > select{
+    outline: none;
+    font-family: "Times New Roman", serif;
+    font-size: 18px;
+    height: 30px;
+    width: 220px;
+}
+section > form > ul > #buttons{
+    width: 250px;
+    margin: 25px auto;
+}
+section > form > ul > #buttons > button, section > form > ul > #buttons > input{
+    outline: none;
+    margin: 5px;
+    color: white;
+    font-size: 16px;
+    background-color: rgba(43, 146, 114, 0.86);
+    border: solid 2px rgba(43, 146, 114, 1);
+    width: 100px;
+    height: 30px;
+}
+section > form > ul > #buttons > button:hover{
+    background-color: rgba(43, 146, 114, 1);
+    cursor: pointer;
+}
+
+main > .messageSection > article{
+    min-height: 110px;
+    max-height: none;
+}
+
+main > .messageSection{
+    margin-bottom: 0px;
+}
+
+.messageSection .userHolder{
+    position: absolute;
+    display: inline-block;
+    width: 150px;
+    min-height: 200px;
+    margin-left: -30px;
+}
+
+.messageSection .userHolder span{
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.messageSection .messageHolder{
+    display: inline-block;
+    width:900px;
+    margin-left: 100px;
+    min-height: 200px;
+}
+
+.messageSection .messageHolder h3, .messageHolder p{
+    text-align: left;
+}
+
+.messageSection .messageHolder p{
+    font-size: 10px;
+}
+
+.messageSection .messageHolder p span{
+    color:#2B9272;
+    cursor: default;
+}
+
+.messageSection .messageHolder .message, .messageHolder .userSign{
+    margin-top: 15px;
+}
+
+.messageHolder .userSign {
+    border-top: 1px solid gray;
+    padding-top: 10px;
 
 
+}
+.messageHolder .message p, .messageHolder .userSign p{
+    text-align: justify;
+    font-size: 12px;
+}
 
+footer{
+    margin-top: 30px;
+}
 
-
+.userPic{
+    width: 70px;
+}
 
 
 

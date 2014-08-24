@@ -48,7 +48,7 @@
                 <input type="password" name="confirmPassword" id="repeatPassword"  required="required">
             </li>
             <li>
-                    <span class="userInfo">Gender</span>
+				<span class="userInfo">Gender</span>
                 <select name="gender">
                     <option value="3">Animal</option>
                     <option value="1">Male</option>

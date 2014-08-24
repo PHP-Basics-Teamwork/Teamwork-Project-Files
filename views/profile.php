@@ -3,14 +3,14 @@
         <header>
             <h1>USER INFORMATION</h1>
         </header>
-               <ul id="basicinfo">
-                   <li><h4>User Name</h4></li>
-                   <li><h5 class="postition">Administrator</h5></li>
-                   <li><img src="resources/userPic.jpg" alt="userPic"></li>
-                   <li><div id="userstatus">Offline</div></li>
-                   <li><a href="#" >Show Posts</a></li>
-                   <li><a href="#" >Show Stats</a></li>
-               </ul>
+	   <ul id="basicinfo">
+		   <li><h4>User Name</h4></li>
+		   <li><h5 class="postition">Administrator</h5></li>
+		   <li><img src="resources/userPic.jpg" alt="userPic"></li>
+		   <li><div id="userstatus">Offline</div></li>
+		   <li><a href="#" class="showMore">Show Posts</a></li>
+		   <li><a href="#" class="showMore">Show Stats</a></li>
+	   </ul>
         <div id="aboutUser">
             <ul>
                 <li><span class="profile-label">Posts:</span> 15</li>
@@ -23,14 +23,8 @@
             </ul>
             <h6>Signature:</h6>
             <p id="signature">
-                some txt some txtsome txtsome txtsome txtsome txtsome txtsome txtsome txtsome txtsome txt
-                some txt some txtsome txtsome txtsome txtsome txtsome txtsome txtsome txtsome txtsome txt
-                some txt some txtsome txtsome txtsome txtsome txtsome txtsome txtsome txtsome txtsome txt
-                some txt some txtsome txtsome txtsome txtsome txtsome txtsome txtsome txtsome txtsome txt
-                some txt some txtsome txtsome txtsome txtsome txtsome txtsome txtsome txtsome txtsome txt dsa das
-                signa t uresi gnature signa tur esigna t uresi gnature signa tur e signa t uresi gnature signa tur e
-                signa t uresi gnature signa tur e signa t uresi gnature signa tur e signa t uresi gnature signa tur e
-            </p>
+				Lorem Ipsum is simply dummy text of the printing and typesettin dummy text of the printing and typesettin dummy text of the printing and typesettin dummy text of the printing and typesettin dummy text of the printing and typesettin dummy text of the printing and typesettin dummy text of the printing and typesettin dummy text of rinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centhe printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</p>
         </div>
     </section>
 </main>

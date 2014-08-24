@@ -9,6 +9,12 @@
             case "login":
                 include 'views/login.php';
                 break;
+			case "question":
+                include 'views/question.php';
+                break;
+			case "profiletemplate":
+				include 'views/profile.php';
+                break;
             case "register":
                 include 'views/registration.php';
                 break;
