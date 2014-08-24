@@ -16,24 +16,16 @@ class PostsManager{
                                           FROM posts
                                           JOIN categories ON posts.category_id = categories.id ");
 
-        //$query->bindParam(':catID', $categoryID);
         $query->execute();
 
         $data = $query->fetchAll();
-        if($data){
-            return new Post($data);
+        $allPosts = [];
+        foreach ($data as $post){
+            array_push($allPosts, $post);
         }
-        return null;
+
+        return $allPosts;
     }
 
 
 }
-
-$allPosts = [];
-$posts = new PostsManager();
-foreach ($posts->getPostsByCategory() as $post){
-    array_push($allPosts, $post);
-}
-
-var_dump($posts->getText());
-var_dump($allPosts->getText());
