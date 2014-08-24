@@ -11,14 +11,15 @@ class PostsManager{
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    function getPostsByCategory($categoryID){
-        $query = $this->pdo->prepare("SELECT id, title, text, user_id, votes, category_id
+    function getPostsByCategory(){
+        $query = $this->pdo->prepare("SELECT posts.id, posts.title, posts.text, posts.user_id, posts.votes, posts.category_id
                                           FROM posts
-                                          WHERE category_id LIKE :catID");
-        $query->bindParam(':catID', $categoryID);
+                                          JOIN categories ON posts.category_id = categories.id ");
+
+        //$query->bindParam(':catID', $categoryID);
         $query->execute();
 
-        $data = $query->fetch();
+        $data = $query->fetchAll();
         if($data){
             return new Post($data);
         }
@@ -28,6 +29,11 @@ class PostsManager{
 
 }
 
+$allPosts = [];
 $posts = new PostsManager();
-$allPosts = $posts->getPostsByCategory(1);
-var_dump($allPosts);
+foreach ($posts->getPostsByCategory() as $post){
+    array_push($allPosts, $post);
+}
+
+var_dump($posts->getText());
+var_dump($allPosts->getText());

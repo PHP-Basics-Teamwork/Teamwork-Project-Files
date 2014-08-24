@@ -28,17 +28,17 @@ class Post {
         if(isset($userData['text'])){
             $this->text = $userData['text'];
         }
-        if(isset($userData['categoryID'])){
-            $this->categoryID = $userData['categoryID'];
+        if(isset($userData['category_id'])){
+            $this->categoryID = $userData['category_id'];
         }
-        if(isset($userData['userID'])){
-            $this->userID = $userData['userID'];
+        if(isset($userData['user_id'])){
+            $this->userID = $userData['user_id'];
         }
         if(isset($userData['votes'])){
             $this->votes = $userData['votes'];
         }
-        if(isset($userData['bestAnswerID'])){
-            $this->bestAnswerID = $userData['bestAnswerID'];
+        if(isset($userData['best_answer_id'])){
+            $this->bestAnswerID = $userData['best_answer_id'];
         }
 
     }
