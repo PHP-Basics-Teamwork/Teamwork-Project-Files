@@ -1,4 +1,6 @@
 <main>
+
+
 	<section>
 		<header>
 			<h1>NEWS</h1>
