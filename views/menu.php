@@ -1,3 +1,4 @@
+<div id="menu">
 <ul>
 	<li><a href="index.php?page=main">Home</a></li>
 	<li><a href="index.php?page=question">Question</a></li>
@@ -17,3 +18,4 @@
         }
     ?>
 </ul>
+</div>

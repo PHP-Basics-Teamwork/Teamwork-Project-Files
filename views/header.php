@@ -11,5 +11,11 @@
 </head>
 <body>
 <header>
+    <div id="navigation">
+    <?php
+    include 'views/search.php';
+    include('views/menu.php');
+    ?>
+    </div>
     <img src="images/logo.png" alt="" class="logo"/>
 </header>

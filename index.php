@@ -2,7 +2,7 @@
     require_once('Controller/usersController.php');
 
     include 'views/header.php';
-    include('views/menu.php');
+
 
     if(isset($_GET['page'])){
         switch($_GET['page']){

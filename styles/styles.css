@@ -455,6 +455,41 @@ footer{
 .userPic{
     width: 70px;
 }
-
-
-
+#navigation{
+    float: right;
+    margin-right:  35px;
+}
+#menu ul li{
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+#menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+}
+#menu ul li a:hover{
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 6px;
+}
+#search{
+    margin-top: 10px;
+    margin-left: 140px;
+}
+#search > input{
+    border: none;
+    height: 20px;
+    padding-left: 4px;
+    outline: none;
+}
+#search > button {
+    border: 1px solid rgba(255,255,255,0.3);
+    height: 20px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
