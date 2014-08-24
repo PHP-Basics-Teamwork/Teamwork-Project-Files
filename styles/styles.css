@@ -232,7 +232,9 @@ main > section > #login-art > form > ul > li {
     font-size: 115%;
 }
 
+
 main > section > #login-art > form > ul > li > input {
+    outline: none;
     font-family: "Open Sans",sans-serif;
     color: #444;
     background: none repeat scroll 0% 0% #FFF;
@@ -242,23 +244,35 @@ main > section > #login-art > form > ul > li > input {
 }
 
 main > section > #login-art > form > ul > li > .submit{
-    background: none repeat scroll 0% 0% #454545;
-    color: #FFF;
-    cursor: pointer;
-    font-weight: 700;
-    border: medium none;
-    padding: 3px 8px;
-    text-transform: uppercase;
-    font-family: "Open Sans Condensed",sans-serif;
-    font-size: 14px;
+
+    outline: none;
+    margin: 5px;
+    color: white;
+    font-size: 16px;
+    background-color: rgba(43, 146, 114, 0.86);
+    border: solid 2px rgba(43, 146, 114, 1);
+    width: 100px;
+    height: 30px;
 }
 
-main > section > #login-art li:nth-child(1){
-    margin-left: -3px;
+main > section > #login-art > form > ul > li > .submit:hover{
+    background-color: rgba(43, 146, 114, 1);
+    cursor: pointer;
 }
 
 main > section > #login-art li:nth-child(3){
-    margin-left: -156px;
+    margin-left: -158px;
+
+}
+#reg{
+    vertical-align: top;
+    text-transform: none;
+    font-size: 11px;
+    color: #2B9272;
+}
+#reg:hover{
+    text-decoration: underline;
+
 }
 
 #basicinfo{
@@ -462,7 +476,7 @@ footer{
 #menu ul li{
     display: inline-block;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 13px;
 }
 #menu ul li a{
     text-decoration: none;
