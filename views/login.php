@@ -24,6 +24,9 @@
                     <li>
                         <input class="submit" type="submit" name="login" value="Login">
                     </li>
+                    <li>
+                        <a id="reg" href="index.php?page=register" > If you don't have registration</a>
+                    </li>
                 </ul>
             </form>
         </article>
