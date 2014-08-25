@@ -14,4 +14,12 @@ class PostsService{
         return $this->manager->getPosts();
     }
 
+
+    function changePost($id, $title, $text) {
+        $this->manager->changePost($id, $title, $text);
+    }
+
+    function getPostByID($id) {
+        return $this->manager->getPostByID($id);
+    }
 }

@@ -27,4 +27,36 @@ class PostsManager{
 
         return $allPosts;
     }
+
+    function getPostByID($id) {
+        $query = $this->pdo->prepare("SELECT id, title, text
+                                          FROM posts
+                                          WHERE id = :id");
+        $query->bindParam(':id', $id);
+        $query->execute();
+
+        $data = $query->fetch();
+        if ($data) {
+            return new Post($data);
+        }
+        return null;
+    }
+
+    function changePost($id, $title, $text) {
+        $query = $this->pdo->prepare("UPDATE posts
+                                          SET title = :title
+                                          AND text = :text
+                                          WHERE id = :id");
+        $query->bindParam(':id', $id);
+        $query->bindParam(':title', $title);
+        $query->bindParam(':text', $text);
+        $query->execute();
+    }
+
+    function deletePost($id) {
+        $query = $this->pdo->prepare("DELETE FROM posts
+                                        WHERE id = :id");
+        $query->bindParam(':id', $id);
+        $query->execute();
+    }
 }
