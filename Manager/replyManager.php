@@ -43,5 +43,15 @@ class replyManager {
 
         return $allReplies;
     }
+
+    function addReply(Reply $reply){
+        $query = $this->pdo->prepare("INSERT INTO replies (text, post_id, user_id)
+                                VALUES (:text, :postId, :userId)");
+        $query -> bindParam(':text', $reply->getText());
+        $query -> bindParam(':postId', $reply->getPostID());
+        $query -> bindParam(':userId', $reply->getUserID());
+
+        $query->execute();
+    }
     
 }

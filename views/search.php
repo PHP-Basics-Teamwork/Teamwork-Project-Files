@@ -1,4 +1,6 @@
 <div id="search">
-    <input type="text" name="search" id="search" placeholder="Search...">
-    <button type="submit" > Search</button>
+    <form action="index.php?page=search" method="POST">
+        <input type="text" name="search" id="search" placeholder="Search...">
+        <input type="submit" name="searchButton" value="Search" />
+    </form>
 </div>

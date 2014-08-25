@@ -5,7 +5,7 @@
 	<?php
        if($user){
     ?>
-           <li><a href="index.php?page=question">Question</a></li>
+           <li><a href="index.php?page=user">Профил</a></li>
            <li><a href="index.php?page=addPost">Добави тема</a></li>
            <li><a href="index.php?page=logout">Logout</a></li>
     <?php

@@ -1,9 +1,5 @@
 <main>
-
     <?php
-
-    require_once('Controller/postsController.php');
-    require_once('Manager/replyManager.php');
 
     $postID = 0;
     if (isset($_GET['id'])){
@@ -49,7 +45,11 @@
     </section>
 
 
-
+    <form action="" method="POST">
+        <label>Отговори</label>
+        <textarea name="text"></textarea>
+        <input type="submit" value="Добави отговор" name="addReply">
+    </form>
 
     <?php
 
@@ -57,7 +57,6 @@
 
     $allReplies = $replyManager->getAllRepliesByTopicID($postID);
 
-   // var_dump($allReplies);
 
     if (count($allReplies) < 1){ ?>
         <section class="messageSection">
@@ -73,7 +72,6 @@
             </header>
         </section>
     <?php
-
 
     foreach ($allReplies as $reply){ ?>
         <section class="messageSection">

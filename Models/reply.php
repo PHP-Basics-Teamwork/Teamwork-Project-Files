@@ -81,7 +81,7 @@ class Reply {
      */
     public function setUserID($user_id)
     {
-        $this->userID = $user_id;
+        $this->user_id = $user_id;
     }
 
     /**
@@ -97,7 +97,7 @@ class Reply {
      */
     public function setPostID($post_id)
     {
-        $this->userID = $post_id;
+        $this->post_id = $post_id;
     }
     
     /**

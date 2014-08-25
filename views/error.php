@@ -8,7 +8,11 @@
                 <img src="img/404.png" alt="error" >
                 <span>
                 <?php
-                echo $_GET['error']; ?>
+                if(isset($_GET['error']))
+                    echo $_GET['error'];
+                else
+                    echo ("Възникна грешка!");
+                ?>
                 </span>
             </div>
          </section>

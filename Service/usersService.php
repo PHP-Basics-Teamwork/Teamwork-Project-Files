@@ -32,6 +32,9 @@
 
         function loginUser($username, $password){
             $user = $this->manager->getUserByUsername($username);
+            if(!$user){
+                throw new Exception("Няма потребител с такова потребителско име!", 400);
+            }
             $password = sha1($password.$user->getSalt());
             $sessionKey = null;
 

@@ -33,4 +33,8 @@ class PostsService{
     function getAllCategories(){
         return $this->manager->getAllCategories();
     }
+
+    function search($queryText){
+        return $this->manager->search($queryText);
+    }
 }

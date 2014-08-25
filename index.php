@@ -1,6 +1,7 @@
 <?php
     require_once('Controller/usersController.php');
     require_once('Controller/postsController.php');
+    require_once('Controller/repliesController.php');
 
     include 'views/header.php';
 
@@ -13,14 +14,11 @@
 			case "question":
                 include 'views/question.php';
                 break;
-			case "profiletemplate":
-				include 'views/profile.php';
-                break;
             case "register":
                 include 'views/registration.php';
                 break;
-            case "profile":
-                include 'views/profile.php';
+            case "user":
+                include 'views/user.php';
                 break;
             case "main":
                 include "views/main.php";
@@ -34,8 +32,11 @@
             case "addPost":
                 include "views/addPost.php";
                 break;
+            case "search":
+                include "views/searchPage.php";
+                break;
             default:
-                header("Location: views/error.php");
+                include "views/error.php";
         }
     }
     else{

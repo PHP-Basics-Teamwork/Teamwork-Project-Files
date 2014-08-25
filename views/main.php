@@ -1,8 +1,5 @@
 <main>
-
     <?php
-
-    require_once('Controller/postsController.php');
 
     $categories = [];
     $allPosts = getPosts($postsService);
@@ -72,67 +69,8 @@
                     </table>
                 </article>
             <?php }?>
-
-
-		<!--article>
-			<table>
-				<tbody>
-				<tr>
-					<td class="imgHolder">
-						<img src="images/off.png" alt="off" class="topicImage"/>
-					</td>
-					<td class="topicDescription">
-						<table class="topicTable">
-							<tbody>
-								<tr><td>General Discussion</td></tr>
-								<tr><td>Feel free to talk about anything and everything in this board.</td></tr>
-							</tbody>
-
-						</table>
-					</td>
-
-					<td class="topicStats">
-						<table class="statsTable">
-							<tbody>
-							<tr><td>7 answers</td></tr>
-							<tr><td>50 votes</td></tr>
-							</tbody>
-						</table>
-					</td>
-
-					<td class="topicLastPost">
-						<table class="lastPostTable">
-                            <tbody>
-                            <tr><td><b>Pesho</b> in <span>Lorem Ipsum</span></td><td>
-                                    <a href="#"><img id="thumbs" src="img/thumbsupp.png"></a>
-                                </td></tr>
-                            <tr><td>October 15, 2010, 07:34:09 AM</td> <td>
-                                    <a href="#"><img id="thumbs" src="img/thumbsdown.jpg"></a>
-                                </td></tr>
-                            </tbody>
-						</table>
-					</td>
-				</tr>
-				</tbody>
-			</table>
-		</article -->
-
-
-
-
-
 	</section>
-
-	<!--section>
-		<header>
-			<h1>HOT QUESTIONS</h1>
-		</header>
-		<?php require("article.php"); ?>
-		<?php require("article.php"); ?>
-
-	</section-->
         <?php
-
         foreach ($categories as $category){ ?>
             <section>
                 <header>
@@ -188,8 +126,4 @@
         }
 
         ?>
-
-
-
-
 </main>

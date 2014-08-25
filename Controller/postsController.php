@@ -5,16 +5,33 @@
     $postsService = new PostsService();
 
     if(isset($_POST['addPost'])){
-        if(!isset($_SESSION['sessionKey'])){
-            throw new Exception('Не сте влезли в акаунта си!');
+        try{
+            if(!$user){
+                throw new Exception('Не сте влезли в акаунта си!');
+            }
+            $newPost = new Post($_POST);
+            $newPost->setUserID($user->getId());
+            $postsService->addPost($newPost);
+
+            header("Location: index.php");
         }
-        $user = $userService->getUserBySessionKey($_SESSION['sessionKey']);
+        catch(Exception $ex){
+            $error = $ex->getMessage();
+            header("Location: index.php?page=error&error=".$error);
+        }
+    }
 
-        $newPost = new Post($_POST);
-        $newPost->setUserID($user->getId());
-        $postsService->addPost($newPost);
-
-        header("Location: index.php");
+    function getSearchResults($postsService){
+        try{
+            if(isset($_POST['search']) && strlen($_POST['search']) != 0){
+                $results = $postsService->search($_POST['search']);
+                return $results;
+            }
+        }
+        catch(Exception $ex){
+            $error = $ex->getMessage();
+            header("Location: index.php?page=error&error=".$error);
+        }
     }
 
     function getPosts($postsService){

@@ -98,4 +98,30 @@ class PostsManager{
 
         return $categories;
     }
+
+    function search($queryText){
+        $queryString = "SELECT posts.id, posts.title, posts.text, users.username, posts.votes,
+                  categories.name, posts.summary, posts.answers
+                  FROM posts
+                  JOIN categories ON posts.category_id = categories.id
+                  JOIN users ON posts.user_id = users.id WHERE";
+
+        $wordsToSearch = preg_split("/[\s,-]+/", $queryText);
+
+        foreach($wordsToSearch as $word){
+            $queryString .= " posts.title LIKE '%".$word."%' AND";
+        }
+        $queryString .= " 1=1";
+
+        $query = $this->pdo->prepare($queryString);
+        $query->execute();
+
+        $data = $query->fetchAll();
+        $allPosts = [];
+        foreach ($data as $post){
+            array_push($allPosts, new Post($post));
+        }
+
+        return $allPosts;
+    }
 }
