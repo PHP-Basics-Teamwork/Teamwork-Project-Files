@@ -31,7 +31,7 @@ class PostsManager {
     function getPostByID($id) {
         $query = $this->pdo->prepare("SELECT id, title, text 
                                           FROM posts
-                                          WHERE id LIKE :id");
+                                          WHERE id = :id");
         $query->bindParam(':id', $id);
         $query->execute();
 
@@ -46,7 +46,7 @@ class PostsManager {
         $query = $this->pdo->prepare("UPDATE posts
                                           SET title = :title 
                                           AND text = :text
-                                          WHERE id LIKE :id");
+                                          WHERE id = :id");
         $query->bindParam(':id', $id);
         $query->bindParam(':title', $title);
         $query->bindParam(':text', $text);
@@ -55,7 +55,7 @@ class PostsManager {
 
     function deletePost($id) {
         $query = $this->pdo->prepare("DELETE FROM posts
-                                        WHERE id LIKE :id");
+                                        WHERE id = :id");
         $query->bindParam(':id', $id);
         $query->execute();
     }

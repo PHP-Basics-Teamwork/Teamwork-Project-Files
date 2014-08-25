@@ -10,9 +10,9 @@ class UsersService {
         $this->manager = new PostManager();
     }
 
-    function changePost($id, $title, $text) {
+    function changePost($title, $text) {
 
-        $this->manager->changePost($post->getId(), $title, $text);
+        $this->manager->changePost($post->getId(), $post->getTitle, $post->getText);
     }
 
     function getPostByID($id) {
