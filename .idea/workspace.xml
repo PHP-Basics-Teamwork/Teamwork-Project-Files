@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="487ca72c-0f9c-4421-9dbf-567fd8750df3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/Post.php" afterPath="$PROJECT_DIR$/Models/Post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main.php" afterPath="$PROJECT_DIR$/views/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/postsManager.php" afterPath="$PROJECT_DIR$/Manager/postsManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/question.php" afterPath="$PROJECT_DIR$/views/question.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/replyManager.php" afterPath="$PROJECT_DIR$/Manager/replyManager.php" />
-    </list>
+    <list default="true" id="487ca72c-0f9c-4421-9dbf-567fd8750df3" name="Default" comment="" />
     <ignored path="Teamwork-Project-Files.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -84,7 +78,7 @@
       <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="191" column="0" selection-start="6791" selection-end="6791" vertical-scroll-proportion="0.7258065" vertical-offset="2707" max-vertical-offset="3451">
+            <state line="190" column="9" selection-start="6790" selection-end="6790" vertical-scroll-proportion="0.702957" vertical-offset="2707" max-vertical-offset="3451">
               <folding />
             </state>
           </provider>
@@ -316,7 +310,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="916" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="916" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -644,7 +638,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="0" selection-start="6791" selection-end="6791" vertical-scroll-proportion="0.7258065" vertical-offset="2707" max-vertical-offset="3451">
+        <state line="190" column="9" selection-start="6790" selection-end="6790" vertical-scroll-proportion="0.702957" vertical-offset="2707" max-vertical-offset="3451">
           <folding />
         </state>
       </provider>
