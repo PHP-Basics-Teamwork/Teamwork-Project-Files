@@ -21,4 +21,8 @@ class PostsService{
     function getPostByID($id) {
         return $this->manager->getPostByID($id);
     }
+
+    function getPostByIDAll($id) {
+        return $this->manager->getPostByIDAll($id);
+    }
 }

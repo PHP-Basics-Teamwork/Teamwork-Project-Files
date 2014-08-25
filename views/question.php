@@ -1,7 +1,25 @@
 <main>
+
+    <?php
+
+    require_once('Controller/postsController.php');
+
+    $postID = 0;
+    if (isset($_GET['id'])){
+        $postID = $_GET['id'];
+    }
+
+    $postService = new PostsService();
+
+    $post = $postService->getPostByIDAll($postID);
+
+    var_dump($post);
+
+    ?>
+
     <section class="messageSection">
         <header>
-            <h1>Topic: C++ VS C#</h1>
+            <h1><?php echo $post->getTitle()?></h1>
         </header>
 
         <article>

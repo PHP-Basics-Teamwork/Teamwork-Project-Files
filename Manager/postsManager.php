@@ -28,6 +28,20 @@ class PostsManager{
         return $allPosts;
     }
 
+    function getPostByIDAll($id) {
+        $query = $this->pdo->prepare("SELECT *
+                                          FROM posts
+                                          WHERE id = :id");
+        $query->bindParam(':id', $id);
+        $query->execute();
+
+        $data = $query->fetch();
+        if ($data) {
+            return new Post($data);
+        }
+        return null;
+    }
+
     function getPostByID($id) {
         $query = $this->pdo->prepare("SELECT id, title, text
                                           FROM posts
