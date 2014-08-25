@@ -1,5 +1,23 @@
 <main>
 
+    <?php
+
+    require_once('Controller/postsController.php');
+
+    $categories = [];
+    $allPosts = getPosts();
+
+    //var_dump($allPosts);
+
+    for ($i = 0; $i < count($allPosts); $i++) {
+        //echo "<header><h1>" . $allPosts[$i][5] . "</h1></header>";
+        if (array_search(strtolower($allPosts[$i][5]), $categories) === false){
+            array_push($categories, strtolower($allPosts[$i][5]));
+        }
+    }
+
+    //var_dump($categories);
+    ?>
 
 	<section>
 		<header>
@@ -17,7 +35,50 @@
 			<h1>LATEST QUESTIONS</h1>
 		</header>
 
-		<article>
+        <?php
+            for ($i = count($allPosts) -1 ; $i >= count($allPosts) - 6; $i--) { ?>
+                <article>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td class="imgHolder">
+                                <img src="images/off.png" alt="off" class="topicImage"/>
+                            </td>
+                            <td class="topicDescription">
+                                <table class="topicTable">
+                                    <tbody>
+                                    <tr><td><?php echo $allPosts[$i][1]?></td></tr>
+                                    <tr><td><?php echo $allPosts[$i][6]?></td></tr>
+                                    </tbody>
+
+                                </table>
+                            </td>
+
+                            <td class="topicStats">
+                                <table class="statsTable">
+                                    <tbody>
+                                    <tr><td><?php echo $allPosts[$i][7]?> answers</td></tr>
+                                    <tr><td><?php echo $allPosts[$i][4]?> votes</td></tr>
+                                    </tbody>
+                                </table>
+                            </td>
+
+                            <td class="topicLastPost">
+                                <table class="lastPostTable">
+                                    <tbody>
+                                    <tr><td><b><?php echo $allPosts[$i][3]?></b> in <span><?php echo $allPosts[$i][5]?></span></td></tr>
+                                    <tr><td>October 15, 2010, 07:34:09 AM</td></tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </article>
+            <?php }?>
+
+
+		<!--article>
 			<table>
 				<tbody>
 				<tr>
@@ -37,8 +98,8 @@
 					<td class="topicStats">
 						<table class="statsTable">
 							<tbody>
-							<tr><td>7 post</td></tr>
-							<tr><td>5 topics</td></tr>
+							<tr><td>7 answers</td></tr>
+							<tr><td>50 votes</td></tr>
 							</tbody>
 						</table>
 					</td>
@@ -54,37 +115,81 @@
 				</tr>
 				</tbody>
 			</table>
-		</article>
+		</article -->
 
 
 
 
-		<?php require("article.php"); ?>
-		<?php require("article.php"); ?>
-		<?php require("article.php"); ?>
-		<?php require("article.php"); ?>
 
 	</section>
 
-	<section>
+	<!--section>
 		<header>
 			<h1>HOT QUESTIONS</h1>
 		</header>
 		<?php require("article.php"); ?>
 		<?php require("article.php"); ?>
-		<?php require("article.php"); ?>
-		<?php require("article.php"); ?>
-		<?php require("article.php"); ?>
-		<?php require("article.php"); ?>
 
-	</section>
+	</section-->
+        <?php
 
-	<section>
-		<header>
-			<h1>SOME SHIT HERE</h1>
-		</header>
-		<?php require("article.php"); ?>
-	</section>
+        foreach ($categories as $category){ ?>
+            <section>
+                <header>
+                    <h1><?php echo $category;?></h1>
+                </header>
+
+                <?php
+                for ($i = 0; $i < count($allPosts); $i++) {
+                    if (strtolower($allPosts[$i][5]) == $category): ?>
+
+                        <article>
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td class="imgHolder">
+                                        <img src="images/off.png" alt="off" class="topicImage"/>
+                                    </td>
+                                    <td class="topicDescription">
+                                        <table class="topicTable">
+                                            <tbody>
+                                            <tr><td><?php echo $allPosts[$i][1]?></td></tr>
+                                            <tr><td><?php echo $allPosts[$i][6]?></td></tr>
+                                            </tbody>
+
+                                        </table>
+                                    </td>
+
+                                    <td class="topicStats">
+                                        <table class="statsTable">
+                                            <tbody>
+                                            <tr><td><?php echo $allPosts[$i][7]?> answers</td></tr>
+                                            <tr><td><?php echo $allPosts[$i][4]?> votes</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+
+                                    <td class="topicLastPost">
+                                        <table class="lastPostTable">
+                                            <tbody>
+                                            <tr><td><b><?php echo $allPosts[$i][3]?></b> in <span><?php echo $allPosts[$i][5]?></span></td></tr>
+                                            <tr><td>October 15, 2010, 07:34:09 AM</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </article>
+
+                    <?php endif;
+                }
+                ?> </section> <?php
+        }
+
+        ?>
+
+
 
 
 </main>

@@ -8,11 +8,15 @@ class Post {
 
     private $text;
 
+    private $summary;
+
     private $categoryID;
 
     private $userID;
 
     private $votes;
+
+    private $answers;
 
     private $bestAnswerID;
 
@@ -37,6 +41,12 @@ class Post {
         if(isset($userData['votes'])){
             $this->votes = $userData['votes'];
         }
+        if(isset($userData['answers'])){
+            $this->answers = $userData['answers'];
+        }
+        if(isset($userData['summary'])){
+            $this->summary = $userData['summary'];
+        }
         if(isset($userData['best_answer_id'])){
             $this->bestAnswerID = $userData['best_answer_id'];
         }
@@ -50,6 +60,24 @@ class Post {
     public function setTitle($title)
     {
         $this->title = $title;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSummary()
+    {
+        return $this->summary;
+    }
+
+    /**
+     * @param string summary
+     * @return Post
+     */
+    public function setSummary($summary)
+    {
+        $this->summary = $summary;
         return $this;
     }
 
@@ -145,6 +173,22 @@ class Post {
     public function setVotes($votes)
     {
         $this->votes = $votes;
+    }
+
+    /**
+     * @return int
+     */
+    public function getAnswers()
+    {
+        return $this->answers;
+    }
+
+    /**
+     * @param int answers
+     */
+    public function setAnswers($answers)
+    {
+        $this->answers = $answers;
     }
 
     /**

@@ -33,7 +33,6 @@
     }
 
 
-    //Handle register request
     if(isset($_POST['registerUser'])){
         try{
             validateUserData($_POST);
@@ -91,7 +90,7 @@
             throw new Exception("Email can not be empty!", 400);
         }
         if(!isset($userData['password']) || strlen($userData['password']) < PASSWORD_MIN_LENGTH){
-            throw new Exception("Password must be atleast " . PASSWORD_MIN_LENGTH . " chars!", 400);
+            throw new Exception("Password must be at least " . PASSWORD_MIN_LENGTH . " chars!", 400);
         }
         if(!isset($userData['gender']) || $userData['gender'] == null){
             throw new Exception("You must select gender!", 400);

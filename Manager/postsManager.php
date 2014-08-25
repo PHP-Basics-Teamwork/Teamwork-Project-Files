@@ -1,7 +1,7 @@
 <?php
 
-require_once('../config.php');
-require_once('../Models/Post.php');
+require_once('config.php');
+require_once('Models/Post.php');
 
 class PostsManager{
     private $pdo;
@@ -11,10 +11,11 @@ class PostsManager{
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    function getPostsByCategory(){
-        $query = $this->pdo->prepare("SELECT posts.id, posts.title, posts.text, posts.user_id, posts.votes, posts.category_id
+    function getPosts(){
+        $query = $this->pdo->prepare("SELECT posts.id, posts.title, posts.text, users.username, posts.votes, categories.name, posts.summary, posts.answers
                                           FROM posts
-                                          JOIN categories ON posts.category_id = categories.id ");
+                                          JOIN categories ON posts.category_id = categories.id
+                                           JOIN users ON posts.user_id = users.id");
 
         $query->execute();
 
@@ -26,6 +27,4 @@ class PostsManager{
 
         return $allPosts;
     }
-
-
 }

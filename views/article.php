@@ -22,8 +22,8 @@ $article = <<<EOD
                         <tbody>
 EOD;
 
-$myTrOne = "<tr><td>" . rand(0, 35) . " posts</td></tr>";
-$myTrTwo = "<tr><td>" . rand(0,35) . " topics</td></tr>";
+$myTrOne = "<tr><td>" . rand(0, 35) . " answers</td></tr>";
+$myTrTwo = "<tr><td>" . rand(35,305) . " votes</td></tr>";
 
 $articleEndPart =  <<<EOD
                         </tbody>
