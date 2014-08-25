@@ -14,6 +14,17 @@
                 <textarea name="text"></textarea>
             </li>
             <li>
+                <label>Избери категория</label>
+                <select name="category_id">
+                    <?php
+                        $categories = getAllCategories($postsService);
+                        foreach($categories as $category){
+                            echo("<option value=".$category['id'].">".$category['name']."</option>");
+                        }
+                    ?>
+                </select>
+            </li>
+            <li>
                 <input type="submit" name="addPost" value="Добави пост"/>
             </li>
         </ul>

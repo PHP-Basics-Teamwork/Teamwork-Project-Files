@@ -39,6 +39,7 @@
                 $sessionKey = $this->generateSessionKey($user->getId());
                 $this->manager->changeUserSessionKey($user->getId(), $sessionKey);
                 $_SESSION['sessionKey'] = $sessionKey;
+                $_SESSION['id'] = $user->getId();
             }
 
             return $sessionKey;

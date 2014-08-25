@@ -31,8 +31,11 @@
             case "error":
                 include "views/error.php";
                 break;
+            case "addPost":
+                include "views/addPost.php";
+                break;
             default:
-                header("Location: error.php");
+                header("Location: views/error.php");
         }
     }
     else{

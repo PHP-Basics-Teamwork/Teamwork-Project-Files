@@ -5,9 +5,7 @@
     require_once('Controller/postsController.php');
 
     $categories = [];
-    $allPosts = getPosts();
-
-    //var_dump($allPosts);
+    $allPosts = getPosts($postsService);
 
     for ($i = 0; $i < count($allPosts); $i++) {
         if (array_search(strtolower($allPosts[$i][5]), $categories) === false){
@@ -15,7 +13,6 @@
         }
     }
 
-    //var_dump($categories);
     ?>
 
 	<section>

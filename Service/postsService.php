@@ -25,4 +25,12 @@ class PostsService{
     function getPostByIDAll($id) {
         return $this->manager->getPostByIDAll($id);
     }
+
+    function addPost(Post $post){
+        $this->manager->addPost($post);
+    }
+
+    function getAllCategories(){
+        return $this->manager->getAllCategories();
+    }
 }

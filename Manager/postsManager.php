@@ -76,4 +76,26 @@ class PostsManager{
         $query->bindParam(':id', $id);
         $query->execute();
     }
+
+    function addPost(Post $post){
+        $query = $this->pdo->prepare("INSERT INTO posts (title, summary, text, category_id, user_id)
+                                VALUES (:title, :summary, :text, :categoryId, :userId)");
+        $query -> bindParam(':title', $post->getTitle());
+        $query -> bindParam(':summary', $post->getSummary());
+        $query -> bindParam(':text', $post->getText());
+        $query -> bindParam(':categoryId', $post->getCategoryID());
+        $query -> bindParam(':userId', $post->getUserID());
+
+        $query->execute();
+    }
+
+    function getAllCategories(){
+        $query = $this->pdo->prepare("SELECT id, name
+                                      FROM categories");
+        $query->execute();
+
+        $categories = $query->fetchAll();
+
+        return $categories;
+    }
 }
