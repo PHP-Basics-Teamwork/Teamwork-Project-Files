@@ -187,17 +187,26 @@ footer p span{
 
 .aboutUs4 {
     height: 100px;
-    padding-left: 380px;
+    padding-left: 360px;
+    display: inline-block;
+
 }
 
 .aboutUs5 {
     height: 100px;
-    padding-left: 500px;
+    padding-left: 490px;
+    display: inline-block;
 }
 
 .aboutUs6 {
     height: 100px;
-    padding-left: 620px;
+    padding-left: 630px;
+}
+
+.whoweare {
+background-color:#6A6A6A;
+    height: 40px;
+    padding-top: 10px;
 }
 
 main > section > header > h1{
