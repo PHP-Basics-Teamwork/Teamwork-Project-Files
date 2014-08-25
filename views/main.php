@@ -45,10 +45,14 @@
 
 					<td class="topicLastPost">
 						<table class="lastPostTable">
-							<tbody>
-								<tr><td><b>Pesho</b> in <span>Lorem Ipsum</span></td></tr>
-								<tr><td>October 15, 2010, 07:34:09 AM</td></tr>
-							</tbody>
+                            <tbody>
+                            <tr><td><b>Pesho</b> in <span>Lorem Ipsum</span></td><td>
+                                    <a href="#"><img id="thumbs" src="img/thumbsupp.png"></a>
+                                </td></tr>
+                            <tr><td>October 15, 2010, 07:34:09 AM</td> <td>
+                                    <a href="#"><img id="thumbs" src="img/thumbsdown.jpg"></a>
+                                </td></tr>
+                            </tbody>
 						</table>
 					</td>
 				</tr>

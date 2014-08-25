@@ -526,3 +526,7 @@ footer{
     font-size: 25px;
     font-family: "Fixedsys";
 }
+#thumbs {
+    width: 30px;
+    height: 30px;
+}
