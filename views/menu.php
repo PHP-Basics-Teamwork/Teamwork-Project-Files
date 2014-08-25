@@ -1,11 +1,12 @@
 <div id="menu">
 <ul>
 	<li><a href="index.php?page=main">Home</a></li>
-	<li><a href="index.php?page=question">Question</a></li>
-	<li><a href="index.php?page=profiletemplate">Profile Example</a></li>
+
 	<?php
        if($user){
     ?>
+           <li><a href="index.php?page=question">Question</a></li>
+           <li><a href="index.php?page=profiletemplate">Profile Example</a></li>
     <li><a href="index.php?page=profile">Profile</a></li>
            <li><a href="index.php?page=logout">Logout</a></li>
     <?php
