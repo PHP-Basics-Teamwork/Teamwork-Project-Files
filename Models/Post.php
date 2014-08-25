@@ -20,6 +20,8 @@ class Post {
 
     private $bestAnswerID;
 
+    private $username;
+
 
     function __construct($userData = null) {
 
@@ -49,6 +51,9 @@ class Post {
         }
         if(isset($userData['best_answer_id'])){
             $this->bestAnswerID = $userData['best_answer_id'];
+        }
+        if(isset($userData['username'])){
+            $this->username = $userData['username'];
         }
 
     }
@@ -206,6 +211,27 @@ class Post {
     {
         $this->bestAnswerID = $bestAnswerID;
     }
+
+    /**
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @param string summary
+     * @return Post
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+        return $this;
+    }
+
+
+
 
 }
 

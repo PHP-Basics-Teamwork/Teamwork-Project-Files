@@ -28,10 +28,13 @@ class PostsManager{
         return $allPosts;
     }
 
+
+
     function getPostByIDAll($id) {
         $query = $this->pdo->prepare("SELECT *
                                           FROM posts
-                                          WHERE id = :id");
+                                          JOIN users ON posts.user_id = users.id
+                                          WHERE posts.id = :id");
         $query->bindParam(':id', $id);
         $query->execute();
 

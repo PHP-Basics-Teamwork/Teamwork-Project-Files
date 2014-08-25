@@ -7,16 +7,15 @@
     $categories = [];
     $allPosts = getPosts();
 
-    var_dump($allPosts);
+    //var_dump($allPosts);
 
     for ($i = 0; $i < count($allPosts); $i++) {
-        //echo "<header><h1>" . $allPosts[$i][5] . "</h1></header>";
         if (array_search(strtolower($allPosts[$i][5]), $categories) === false){
             array_push($categories, strtolower($allPosts[$i][5]));
         }
     }
 
-    var_dump($categories);
+    //var_dump($categories);
     ?>
 
 	<section>
@@ -157,7 +156,7 @@
                                     <td class="topicDescription">
                                         <table class="topicTable">
                                             <tbody>
-                                            <tr><td><?php echo $allPosts[$i][1]?></td></tr>
+                                            <tr><td onclick="window.location='<?php echo "?page=question&id=" . $allPosts[$i][0]?>'"><?php echo $allPosts[$i][1]?></td></tr>
                                             <tr><td><?php echo $allPosts[$i][6]?></td></tr>
                                             </tbody>
 

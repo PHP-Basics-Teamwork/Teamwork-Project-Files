@@ -1,7 +1,7 @@
 <?php
 
-require_once('../config.php');
-require_once('../Models/Reply.php');
+require_once('config.php');
+require_once('Models/Reply.php');
 
 class replyManager {
 
@@ -24,6 +24,24 @@ class replyManager {
             return new Reply($data);
         }
         return null;
+    }
+
+    function getAllRepliesByTopicID($id){
+        $query = $this->pdo->prepare("SELECT *
+                                          FROM replies
+                                          JOIN users ON replies.user_id = users.id
+                                          WHERE post_id LIKE :id");
+        $query->bindParam(':id', $id);
+        $query->execute();
+
+
+        $data = $query->fetchAll();
+        $allReplies = [];
+        foreach ($data as $reply){
+            array_push($allReplies, $reply);
+        }
+
+        return $allReplies;
     }
     
 }
