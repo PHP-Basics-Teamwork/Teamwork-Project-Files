@@ -36,7 +36,7 @@
 
             <div class="messageHolder">
                 <h3><?php echo $post->getTitle()?></h3>
-                <p>на <span>19-03-2006</span></p>
+                <p>на <span><?php echo $post->getDate(); ?></span></p>
                 <div class="message">
                     <p><?php echo $post->getText()?></p>
                 </div>

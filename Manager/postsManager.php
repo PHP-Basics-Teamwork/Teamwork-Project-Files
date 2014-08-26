@@ -51,7 +51,7 @@ class PostsManager{
     }
 
     function getPostByIDAll($id) {
-        $query = $this->pdo->prepare("SELECT posts.id AS id, posts.title, posts.summary, posts.text, posts.answers,
+        $query = $this->pdo->prepare("SELECT posts.id AS id, posts.title, posts.summary, posts.text, posts.answers, posts.date,
                                           users.username AS username, users.id AS user_id
                                           FROM posts
                                           JOIN users ON posts.user_id = users.id
