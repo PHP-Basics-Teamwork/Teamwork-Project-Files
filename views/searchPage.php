@@ -16,7 +16,6 @@ if(count($foundPosts)>0){
 
     foreach($foundPosts as $post){
 ?>
-
         <article>
             <table>
                 <tbody>
