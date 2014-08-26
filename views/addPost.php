@@ -1,4 +1,8 @@
-<div id="addPostWrapper">
+<section id="secAddPost">
+ <header>
+<h1>Add post</h1>
+ </header>
+    <div id="addPostWrapper">
     <form action="" method="POST">
         <ul>
             <li>
@@ -25,8 +29,9 @@
                 </select>
             </li>
             <li>
-                <input type="submit" name="addPost" value="Добави пост"/>
+                <input type="submit" name="addPost" value="Добави пост" id="setPost"/>
             </li>
         </ul>
     </form>
 </div>
+</section>
