@@ -558,3 +558,62 @@ footer{
 main > .question {
     min-height: 230px;
 }
+#secAddPost{
+    background: white;
+    width: 1050px;
+    border: 1px solid #DADCE2;
+    margin: 0px auto;
+    margin-top: 20px;
+
+}
+#secAddPost > header {
+    height: 40px;
+
+
+}
+#secAddPost > header > h1{
+    color: white;
+    font-size: 19px;
+    padding-top: 10px;
+    padding-left: 10px;
+
+}
+#addPostWrapper ul li{
+    list-style-type: none;
+    margin-bottom: 15px;
+
+}
+#addPostWrapper{
+    width: 390px;
+    margin: 30px auto;
+
+}
+#addPostWrapper label{
+    display: inline-block;
+    width: 150px;
+
+    margin-right: 10px;
+}
+#addPostWrapper  input, textarea, select{
+    width: 200px;
+    height: 30px;
+    outline: none;
+}
+
+
+#addPostWrapper textarea{
+    height: 140px;
+    max-width: 200px;
+}
+#setPost{
+
+    margin-left: 97px;
+    background-color: rgba(43, 146, 114, 0.8);
+    border: solid 2px rgba(43, 146, 114, 1);
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+#addPostWrapper li:last-child input:hover{
+    background-color: rgba(43, 146, 114, 1);
+}
