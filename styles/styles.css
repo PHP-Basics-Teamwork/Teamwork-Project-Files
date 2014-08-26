@@ -484,6 +484,7 @@ footer{
     margin-right:  35px;
 }
 #menu ul{
+    margin-top: -5px;
     text-align: right;
 }
 #menu ul li{
@@ -502,15 +503,26 @@ footer{
     background-color: rgba(255,255,255,0.3);
     border-radius: 6px;
 }
-#search{
-    margin-top: 10px;
-    margin-left: 80px;
-}
-#search > input{
-    border: none;
-    height: 20px;
-    padding-left: 4px;
+#searchButon{
+    padding: 3px;
+    height: 25px;
+    color: white;
+    background-color: #7A958C;
+    border: solid 1px #7A958C;
     outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 0 5px 5px 0;
+    margin-left: -5px;
+}
+#search{
+    margin-top: 5px;
+    margin-left: 80px;
+    outline: none;
+    padding: 3px;
+    border-radius: 5px 0 0 5px;
+    border: solid 2px rgba(43, 146, 114, 0.8);
+
 }
 #search > button{
     border: 1px solid rgba(255,255,255,0.3);
@@ -601,8 +613,6 @@ main > .question {
     height: 30px;
     outline: none;
 }
-
-
 #addPostWrapper textarea{
     height: 140px;
     max-width: 200px;
