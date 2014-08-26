@@ -1,6 +1,7 @@
 <main>
     <?php
 
+
     $categories = [];
     $allPosts = getPosts($postsService);
 
@@ -14,7 +15,7 @@
 
 	<section>
 		<header>
-			<h1>NEWS</h1>
+			<h1>НОВИНИ</h1>
 		</header>
 		<article>
 			<div>
@@ -25,7 +26,7 @@
 
 	<section>
 		<header>
-			<h1>LATEST QUESTIONS</h1>
+			<h1>ПОСЛЕДНИ ВЪПРОСИ</h1>
 		</header>
 
         <?php
@@ -51,7 +52,7 @@
                             <td class="topicStats">
                                 <table class="statsTable">
                                     <tbody>
-                                    <tr><td><?php echo $post->getAnswers();?> answers</td></tr>
+                                    <tr><td><?php echo $post->getAnswers();?> отговора</td></tr>
                                     </tbody>
                                 </table>
                             </td>
@@ -59,7 +60,7 @@
                             <td class="topicLastPost">
                                 <table class="lastPostTable">
                                     <tbody>
-                                    <tr><td><b><?php echo $post->getUsername();?></b> in <span><?php echo $post->getCategoryName();?></span></td></tr>
+                                    <tr><td><b><?php echo $post->getUsername();?></b> в <span><?php echo $post->getCategoryName();?></span></td></tr>
                                     <tr><td><?php echo $post->getDate(); ?></td></tr>
                                     </tbody>
                                 </table>
@@ -100,7 +101,7 @@
                                     <td class="topicStats">
                                         <table class="statsTable">
                                             <tbody>
-                                            <tr><td><?php echo $post->getAnswers()?> answers</td></tr>
+                                            <tr><td><?php echo $post->getAnswers()?> отговора</td></tr>
 
                                             </tbody>
                                         </table>
@@ -109,7 +110,7 @@
                                     <td class="topicLastPost">
                                         <table class="lastPostTable">
                                             <tbody>
-                                            <tr><td><b><?php echo $post->getUsername()?></b> in <span><?php echo $post->getCategoryName();?></span></td></tr>
+                                            <tr><td><b><?php echo $post->getUsername()?></b> в <span><?php echo $post->getCategoryName();?></span></td></tr>
                                             <tr><td><?php echo $post->getDate(); ?></td></tr>
                                             </tbody>
                                         </table>

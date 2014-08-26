@@ -1,13 +1,13 @@
 <main>
     <section>
         <header>
-            <h1>registration</h1>
+            <h1>регистрация</h1>
         </header>
         <form action="" method="post">
         <ul>
             <li>
                 <span class="userInfo">
-                <label for="userName">User Name</label>
+                <label for="userName">Потребителско име</label>
                 </span>
                 <input type="text" name="username" id="userName" required="required">
             </li>
@@ -19,45 +19,46 @@
             </li>
             <li>
                 <span class="userInfo">
-                    <label>First Name</label>
-                </span>
-                <input type="text" name="firstName" required="required">
-            </li>
-            <li>
-                <span class="userInfo">
-                    <label>Last Name</label>
-                </span>
-                <input type="text" name="lastName" required="required">
-            </li>
-            <li>
-                <span class="userInfo">
-                    <label for="confirmedEmail">Confirmed Email</label>
+                    <label for="confirmedEmail">Повтори email</label>
                 </span>
                 <input type="email" name="confirmEmail" id="confirmedEmail"  required="required">
             </li>
             <li>
                 <span class="userInfo">
-                    <label for="password">Password</label>
+                <label>Име</label>
+                </span>
+                <input type="text" name="firstName" required="required">
+            </li>
+            <li>
+                <span class="userInfo">
+                    <label>Фамилия</label>
+                </span>
+                <input type="text" name="lastName" required="required">
+            </li>
+
+            <li>
+                <span class="userInfo">
+                    <label for="password">Парола</label>
                 </span>
                 <input type="password" name="password" id="password"  required="required">
             </li>
             <li>
                 <span class="userInfo">
-                <label for="repeatPassword">Repeat password</label>
+                <label for="repeatPassword">Повтори парола</label>
                     </span>
                 <input type="password" name="confirmPassword" id="repeatPassword"  required="required">
             </li>
             <li>
-				<span class="userInfo">Gender</span>
+				<span class="userInfo">Пол</span>
                 <select name="gender">
-                    <option value="3">Animal</option>
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
+                    <option value="3">Животно</option>
+                    <option value="1">Мъж</option>
+                    <option value="2">Жена</option>
                 </select>
             </li>
             <li id="buttons">
-                <input type="submit" name="registerUser" value="Register">
-                <button type="reset">Clear</button>
+                <input type="submit" name="registerUser" value="Регистрация">
+                <button type="reset">Изчисти</button>
             </li>
         </ul>
         </form>

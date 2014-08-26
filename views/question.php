@@ -31,12 +31,12 @@
                 <h4><?php echo $post->getUsername();?></h4>
                 <span></span>
                 <img src="http://demo.dzinerstudio.com/smf2/avatars/Actors/Bruce_Campbell.jpg" alt="" class="userPic"/>
-                <span style="width:100px; text-align: left">Posts: 12</span>
+
             </div>
 
             <div class="messageHolder">
                 <h3><?php echo $post->getTitle()?></h3>
-                <p>on <span>19-03-2006</span></p>
+                <p>на <span>19-03-2006</span></p>
                 <div class="message">
                     <p><?php echo $post->getText()?></p>
                 </div>
@@ -57,14 +57,14 @@
     if (count($allReplies) < 1){ ?>
         <section class="messageSection">
             <header>
-                <h1>Answers: None</h1>
+                <h1>Няма отговори</h1>
             </header>
         </section>
     <?php
     } else {?>
         <section class="messageSection">
             <header>
-                <h1>Answers</h1>
+                <h1>Отговори</h1>
             </header>
         </section>
     <?php
@@ -76,12 +76,12 @@
                     <h4><?php echo $reply[7]?></h4>
                     <span></span>
                     <img src="http://img2.wikia.nocookie.net/__cb20100420145532/starwars/images/a/a8/Lucksprite_tentacle_head.png" alt="" class="userPic"/>
-                    <span style="width:100px; text-align: left">Posts: 12</span>
+
                 </div>
 
                 <div class="messageHolder">
                     <h3><?php echo $post->getTitle()?></h3>
-                    <p>on <span><?php echo $reply[5]; ?></span></p>
+                    <p>на <span><?php echo $reply[5]; ?></span></p>
                     <div class="message">
                         <p><?php echo $reply[1]?></p>
                     </div>
@@ -95,7 +95,7 @@
 
     <section class="messageSection">
         <header>
-            <h1>ADD ANSWER</h1>
+            <h1>ДОБАВИ ОТГОВОР</h1>
         </header>
 
         <form action="" method="POST">

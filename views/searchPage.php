@@ -9,7 +9,7 @@ if(count($foundPosts)>0){
 
     <section>
     <header>
-        <h1>SEARCH RESULTS</h1>
+        <h1>РЕЗУЛТАТИ ОТ ТЪРСЕНЕТО</h1>
     </header>
 
     <?php
@@ -39,7 +39,7 @@ if(count($foundPosts)>0){
 } else{ ?>
     <section>
         <header>
-            <h1>NO THREADS FOUND</h1>
+            <h1>НЯМА РЕЗУЛТАТИ</h1>
         </header>
     </section>
 <?php }

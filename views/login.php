@@ -10,22 +10,22 @@
             <form method="post" action="">
                 <ul>
                     <li>
-                        Username:
+                        Потребител:
                         <input type="text" name="username">
                     </li>
                     <li>
-                        Password:
+                        Парола:
                         <input type="password" name="password">
                     </li>
                     <li>
-                        Remember me:
+                        Запомни ме:
                         <input type="checkbox" name="checkbox">
                     </li>
                     <li>
-                        <input class="submit" type="submit" name="login" value="Login">
+                        <input class="submit" type="submit" name="login" value="Влез">
                     </li>
                     <li>
-                        <a id="reg" href="index.php?page=register" > If you don't have registration</a>
+                        <a id="reg" href="index.php?page=register" > Ако нямате регистрация</a>
                     </li>
                 </ul>
             </form>
