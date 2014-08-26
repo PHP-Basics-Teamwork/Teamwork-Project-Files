@@ -31,7 +31,6 @@
                 <h4><?php echo $post->getUsername();?></h4>
                 <span></span>
                 <img src="img/Icon-user.png" alt="" class="userPic"/>
-
             </div>
 
             <div class="messageHolder">
