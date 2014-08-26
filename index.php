@@ -50,7 +50,6 @@
     else{
         include('views/main.php');
     }
-	
-	
+
     include 'views/footer.php';
 ?>
