@@ -21,7 +21,7 @@ footer{
     border-top: 2px solid #DADCE2;
 }
 
-main > section{
+main > section, section{
     width:1050px;
     border: 0px solid black;
     margin: 0px auto;
@@ -30,7 +30,7 @@ main > section{
 
 }
 
-main > section > article{
+main > section > article, section > article{
     background: white;
     width: 100%;
     border: 1px solid #DADCE2;
@@ -39,7 +39,7 @@ main > section > article{
     margin-bottom: 3px;
 }
 
-main > section > article > div{
+main > section > article > div, section > article > div{
     text-align: center;
     font-size: 14px;
     color: #595959;
@@ -49,7 +49,7 @@ main > section > article > div{
     padding-right: 50px;
 }
 
-main > section > header{
+main > section > header, section > article > header{
     width: 100%;
     height: 45px;
     color: white;
@@ -57,13 +57,13 @@ main > section > header{
     background: #2B9272;
 }
 
-main > section > header > h1{
+main > section > header > h1, section > header > h1{
     padding-top: 10px;
     padding-left: 10px;
     font-size: 19px;
 }
 
-main > section > article > table{
+main > section > article > table, section > article > table{
     width: 100%;
     height: 68px;
     border-collapse: collapse;
@@ -78,76 +78,9 @@ main > section > article > table{
     padding-left: 20px;
 }
 
-.topicDescription{
-    width: 565px;
-}
 
-.topicStats{
-    width:160px;
-}
 
-.topicLastPost{
-    width: 260px;
-}
-
-.logo{
-    width: 400px;
-    display: inline-block;
-}
-
-.statsTable{
-    width: 95%;
-}
-
-.statsTable td{
-    text-align: right;
-    font-size: 14px;
-
-}
-
-.topicTable{
-    margin-left: 10px;
-    width: 95%;
-}
-
-.topicTable tr td{
-    text-align: left;
-    font-size: 15px;
-}
-
-.topicTable tr td:hover{
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.topicTable tr:nth-child(2) td{
-    font-size: 13px;
-}
-
-.lastPostTable{
-    width: 95%;
-    margin-left: 10px;
-}
-
-.lastPostTable tr td{
-    text-align: left;
-    font-size: 15px;
-}
-
-.lastPostTable tr:nth-child(2) td{
-    font-size: 13px;
-}
-
-.lastPostTable tr td b{
-    cursor: pointer;
-}
-
-.lastPostTable tr td span{
-    color:#2B9272;
-    cursor: pointer;
-}
-
-main > section > article > table > tbody > tr > td, main > section > article > table > tbody > tr > th{
+section > article > table > tbody > tr > td, section > article > table > tbody > tr > th{
     border: 1px solid #DADCE2;
 }
 
@@ -209,7 +142,7 @@ background-color:#6A6A6A;
     padding-top: 10px;
 }
 
-main > section > header > h1{
+section > header > h1, section > header > h1{
     padding-top: 10px;
     padding-left: 10px;
     font-size: 19px;
@@ -539,6 +472,75 @@ footer{
 #thumbs {
     width: 30px;
     height: 30px;
+}
+
+.topicDescription{
+    width: 565px;
+}
+
+.topicStats{
+    width:160px;
+}
+
+.topicLastPost{
+    width: 260px;
+}
+
+.logo{
+    width: 400px;
+    display: inline-block;
+}
+
+.statsTable{
+    width: 95%;
+}
+
+.statsTable td{
+    text-align: right;
+    font-size: 14px;
+
+}
+
+.topicTable{
+    margin-left: 10px;
+    width: 95%;
+}
+
+.topicTable tr td{
+    text-align: left;
+    font-size: 15px;
+}
+
+.topicTable tr td:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.topicTable tr:nth-child(2) td{
+    font-size: 13px;
+}
+
+.lastPostTable{
+    width: 95%;
+    margin-left: 10px;
+}
+
+.lastPostTable tr td{
+    text-align: left;
+    font-size: 15px;
+}
+
+.lastPostTable tr:nth-child(2) td{
+    font-size: 13px;
+}
+
+.lastPostTable tr td b{
+    cursor: pointer;
+}
+
+.lastPostTable tr td span{
+    color:#2B9272;
+    cursor: pointer;
 }
 
 .messageSection > form{
