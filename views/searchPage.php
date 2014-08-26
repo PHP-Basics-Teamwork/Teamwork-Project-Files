@@ -1,22 +1,48 @@
+<main>
 <?php
 
 $foundPosts = getSearchResults($postsService);
 
 if(count($foundPosts)>0){
+
+    ?>
+
+    <section>
+    <header>
+        <h1>SEARCH RESULTS</h1>
+    </header>
+
+    <?php
+
     foreach($foundPosts as $post){
 ?>
-        <div><a href="index.php?page=question&id=<?php echo $post->getId(); ?>">
-                <div><?php echo $post->getTitle(); ?></div>
-                <div><?php echo $post->getSummary(); ?></div>
-            </a>
-            <br>
-        </div>
+
+        <article>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="topicDescription">
+                            <table class="topicTable">
+                                <tbody>
+                                    <tr><td onclick="window.location='index.php?page=question&id=<?php echo $post->getId(); ?>'"><?php echo $post->getTitle();?></td></tr>
+                                    <tr><td><?php echo $post->getSummary();?></td></tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+<?php } ?>
+    </section>
 <?php
-    }
-}
-else{
+} else{ ?>
+    <section>
+        <header>
+            <h1>NO THREADS FOUND</h1>
+        </header>
+    </section>
+<?php }
 ?>
-    <div>Няма намерени резултати!</div>
-<?php
-}
-?>
+</main>
