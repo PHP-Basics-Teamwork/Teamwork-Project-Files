@@ -8,7 +8,7 @@ class replyManager {
     private $pdo;
 
     function __construct() {
-        $this->pdo = new PDO('mysql:host=localhost;dbname=forum', DATABASE_USER);
+        $this->pdo = new PDO('mysql:host=localhost;dbname=forum;charset=utf8', DATABASE_USER);
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     
