@@ -32,9 +32,7 @@
                    ?>
                </h5></li>
 		   <li><img src="resources/userPic.jpg" alt="userPic"></li>
-		   <li><div id="userstatus">Offline</div></li>
-		   <li><a href="#" class="showMore">Show Posts</a></li>
-		   <li><a href="#" class="showMore">Show Stats</a></li>
+		   <li><div id="userstatus">Online</div></li>
 	   </ul>
         <div id="aboutUser">
             <ul>

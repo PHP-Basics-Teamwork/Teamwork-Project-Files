@@ -244,6 +244,16 @@ main > section > #login-art li:nth-child(3){
 #basicinfo  img{
     width: 100px;
     height: 100px;
+
+}
+#basicinfo > li:nth-child(2) > h5{
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
+    width: 95%;
+}
+#userstatus{
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 #basicinfo .showMore{
@@ -274,6 +284,7 @@ section > #aboutUser > ul > li > .profile-label{
     font-weight: bold;
     display: inline-block;
     width: 200px;
+    margin-bottom: 8px;
 }
 
 section > #aboutUser  > h6{
@@ -285,7 +296,9 @@ section > #aboutUser  > #signature{
     padding: 10px;
     font-size: 14px;
     font-style: italic;
+
 }
+
 
 section > header > h1{
     text-transform: uppercase;
