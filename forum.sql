@@ -62,8 +62,8 @@ CREATE TABLE IF NOT EXISTS `gender` (
 --
 
 INSERT INTO `gender` (`id`, `gender`) VALUES
-(1, 'male'),
-(2, 'female'),
+(1, 'Male'),
+(2, 'Female'),
 (3, 'Animal');
 
 -- --------------------------------------------------------
@@ -82,6 +82,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `votes` int(11) NOT NULL DEFAULT '0',
   `answers` int(11) DEFAULT '0',
   `best_answer_id` int(11) DEFAULT NULL,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `category_id` (`category_id`,`user_id`),
   KEY `best_answer_id` (`best_answer_id`),
@@ -89,23 +90,18 @@ CREATE TABLE IF NOT EXISTS `posts` (
   KEY `best_answer_id_2` (`best_answer_id`),
   KEY `category_id_3` (`category_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
 -- Схема на данните от таблица `posts`
 --
 
-INSERT INTO `posts` (`id`, `title`, `summary`, `text`, `category_id`, `user_id`, `votes`, `answers`, `best_answer_id`) VALUES
-(3, 'Wallpapers and Pics', 'Fell free to post any pictures here...', 'i have a picture', 1, 8, 0, 7, NULL),
-(4, 'Eminem - Some Song', 'Post your favourite Eminem songs here..', 'Eminem song. He sings. Nice', 2, 12, 3, 2, NULL),
-(5, 'Cartoon Network Video', 'Tell us what you think about it', 'Cartoon Network Video Cartoon Network Video', 3, 8, 1, 5, NULL),
-(6, 'The new and the best... VW POLO', 'Do you want to drive it?', 'Volkswagen Polo is a supermini car produced by the German manufacturer Volkswagen since 1975. It is sold in Europe and other markets worldwide in hatchback, sedan, coupé and estate variants.', 5, 12, 5, 0, NULL),
-(7, 'Google Books', 'Any google books that you like, can be found here', 'Search and preview millions of books from libraries and publishers worldwide using Google Book Search. Discover a new favorite or unearth an old', 4, 8, 2, 3, NULL),
-(8, 'Some 50 Cent songs maybe', 'Can someone sudgest me some songs?', 'So hi.. I''m amateur rap fan, and I want to become the real OG. So... Cound you sudgest me some of 50''s song, so I can become a gangster? Thanks :) :D', 2, 8, 4, 0, NULL),
-(9, 'The New LAMBO is out guys?!?!!!!', 'Lets hear what u think about it. I hear its faaasst...', 'So I''m very rich programmer, and I just found out, that the new lambo is out. Can u believe it? I have waited for this moment my whole live, and now, I even can afford to buy it!! Wow. So what do you think? Should I?', 5, 12, 17, 6, NULL),
-(13, 'New post', 'lba bal', 'd awd wadwa dwa daw dwa dag ewagwrgaergag da gaw4', 2, 8, 0, 0, NULL),
-(14, 'new post 2', 'dsadasda', 'dsadasdas', 4, 8, 0, 0, NULL),
-(15, 'fdsf', 'fdsfs', 'fsdfsdfsd', 2, 8, 0, 0, NULL);
+INSERT INTO `posts` (`id`, `title`, `summary`, `text`, `category_id`, `user_id`, `votes`, `answers`, `best_answer_id`, `date`) VALUES
+(13, 'New post', 'lba bal', 'd awd wadwa dwa daw dwa dag ewagwrgaergag da gaw4', 2, 8, 0, 1, NULL, '0000-00-00 00:00:00'),
+(15, 'fdsf', 'fdsfs', 'fsdfsdfsd', 2, 8, 0, 0, NULL, '0000-00-00 00:00:00'),
+(16, 'Temata na icaka', 'sumaarito na temata na icaka', 'Pozdrav za martin Pozdrav za martin Pozdrav za martin Pozdrav za martin Pozdrav za martin Pozdrav za martin Pozdrav za martin ', 2, 15, 0, 2, NULL, '0000-00-00 00:00:00'),
+(17, 'Temata na icaka2', 'dsadsada', 'dsadsa dsad asd ad sa', 4, 15, 0, 0, NULL, '2014-08-26 23:09:14'),
+(18, '<h1>dasdas</h1>', 'dsadsadsa', 'dsadasdsa', 3, 15, 0, 6, NULL, '2014-08-26 23:16:58');
 
 -- --------------------------------------------------------
 
@@ -136,26 +132,30 @@ CREATE TABLE IF NOT EXISTS `replies` (
   `user_id` int(11) NOT NULL,
   `post_id` int(11) NOT NULL,
   `votes` int(11) NOT NULL DEFAULT '0',
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`,`post_id`),
   KEY `user_id_2` (`user_id`),
   KEY `post_id` (`post_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
 -- Схема на данните от таблица `replies`
 --
 
-INSERT INTO `replies` (`id`, `text`, `user_id`, `post_id`, `votes`) VALUES
-(2, 'I like pictures too bruh..', 8, 3, 12),
-(3, 'ewfewfewfw', 8, 14, 0),
-(4, 'dwadada', 8, 14, 0),
-(5, 'gfdgd', 8, 14, 0),
-(6, 'dwadaw', 8, 14, 0),
-(7, 'answer', 8, 15, 0),
-(8, 'fas 2', 8, 15, 0),
-(9, 'fafda  2', 8, 15, 0),
-(10, '33333333', 8, 14, 0);
+INSERT INTO `replies` (`id`, `text`, `user_id`, `post_id`, `votes`, `date`) VALUES
+(7, 'answer', 8, 15, 0, '2014-08-26 23:34:13'),
+(8, 'fas 2', 8, 15, 0, '2014-08-26 23:34:13'),
+(9, 'fafda  2', 8, 15, 0, '2014-08-26 23:34:13'),
+(13, 'gdfgdgd', 8, 13, 0, '2014-08-26 23:34:13'),
+(14, 'Za icaka', 15, 16, 0, '2014-08-26 23:34:13'),
+(15, 'gdfgdfgdf', 15, 16, 0, '2014-08-26 23:34:13'),
+(16, 'gdgdgdfgdfg', 15, 18, 0, '2014-08-26 23:34:13'),
+(17, 'gdfgdfgdf', 15, 18, 0, '2014-08-26 23:34:13'),
+(18, 'dgdfgdf', 8, 18, 0, '2014-08-26 23:34:13'),
+(19, 'nnnnnn', 8, 18, 0, '2014-08-26 23:34:13'),
+(20, 'fsfsfsfsd', 8, 18, 0, '2014-08-26 23:39:01'),
+(21, 'fsfsfsfsd', 8, 18, 0, '2014-08-26 23:39:41');
 
 -- --------------------------------------------------------
 
@@ -191,17 +191,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `username` (`username`),
   KEY `gender_id` (`gender_id`),
   KEY `session_key` (`session_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Схема на данните от таблица `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`, `password`, `gender_id`, `salt`, `session_key`, `isAdmin`) VALUES
-(8, 'gardax', 'gardax95@gmail.com', 'Georgi', 'Georgiev', 'd13ce3e2ffad97e5cb37a7f95472ac0a0f22f376', 1, 's1jnq6lbskgkc8s4s0ckkcwkgo8kk0c', '84yEJUVhmgzzIdzqCndRM9VX59hKGmnXCVuNkIbaFb0NZPhR1Bl', 0),
+(8, 'gardax', 'gardax95@gmail.com', 'Georgi', 'Georgiev', 'd13ce3e2ffad97e5cb37a7f95472ac0a0f22f376', 1, 's1jnq6lbskgkc8s4s0ckkcwkgo8kk0c', '82aeCplHI2h0PsFn65k6Vs4uCwWgGXyOIMkVPdizB5CKiu2Taqb', 0),
 (12, 'divoom12', 'divoom12@abv.bg', 'Yavor', 'Ivanov', 'caf8ef81c530bbe32726475e8ea2736d5bf1ae57', 3, 'qsbg0hpc62o48k4sc8cokckgccw0s8g', NULL, 0),
 (13, 'fasdfsafa', '3dfsafas@dsa.com', 'dsada', 'dsadas', '1d70a01b961bcf5eb9635a8713c7a57a1f0cd9fa', 1, 'rd38ftwgckgg448ow0w8wo8coc8w0gw', NULL, 0),
-(14, 'admin-', 'admin@gmail.com', 'Admin', 'Admin', 'ce31215085c15d3657cbd9a837118d841b1b3b7f', 3, 'hlq6msfv6144cc8oc4408ksgg840kso', NULL, 0);
+(14, 'admin-', 'admin@gmail.com', 'Admin', 'Admin', 'ce31215085c15d3657cbd9a837118d841b1b3b7f', 3, 'hlq6msfv6144cc8oc4408ksgg840kso', NULL, 0),
+(15, 'Icaka', 'icaka@abv.bg', 'Icaka', 'Icaka', 'b5d4716b837b43ad7b6831cdf1eec814acc945f2', 3, 'sxa4h60fbqs8ckk8g80kos848gs04kw', '15OHYrptY277lzLA1g6lgbV7ah7x4S3UzpuSgJl3ypD0EtMXISnM', 1);
 
 --
 -- Ограничения за дъмпнати таблици

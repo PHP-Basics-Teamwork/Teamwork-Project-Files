@@ -642,3 +642,12 @@ main > .question {
 #addPostWrapper li:last-child input:hover{
     background-color: rgba(43, 146, 114, 1);
 }
+body > main > section.messageSection.question > header > a > input[type="button"]{
+    padding: 3px;
+    margin-top: 9px;
+    margin-right: 9px;
+    background-color: #7A958C;
+    color: white;
+    border: 1px solid #7A958C;
+    border-radius: 5px;
+}
