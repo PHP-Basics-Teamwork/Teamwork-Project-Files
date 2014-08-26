@@ -6,7 +6,7 @@
     $allPosts = getPosts($postsService);
 
     foreach ($allPosts as $post) {
-        if (array_search(strtolower($post->getCategoryName()), $categories) === false){
+        if (array_search(  strtolower($post->getCategoryName()), $categories) === false){
             array_push($categories, strtolower($post->getCategoryName()));
         }
     }
