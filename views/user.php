@@ -31,7 +31,7 @@
                     }
                    ?>
                </h5></li>
-<!--		   <li><img src="resources/userPic.jpg" alt="userPic"></li>-->
+		   <li><img src="img/Icon-user.png" alt="userPic"></li>
 <!--		   <li><a href="#" class="showMore">Show Posts</a></li>-->
 	   </ul>
         <div id="aboutUser">

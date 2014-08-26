@@ -30,7 +30,7 @@
             <div class="userHolder">
                 <h4><?php echo $post->getUsername();?></h4>
                 <span></span>
-                <img src="http://demo.dzinerstudio.com/smf2/avatars/Actors/Bruce_Campbell.jpg" alt="" class="userPic"/>
+                <img src="img/Icon-user.png" alt="" class="userPic"/>
 
             </div>
 
@@ -75,7 +75,7 @@
                 <div class="userHolder">
                     <h4><?php echo $reply[7]?></h4>
                     <span></span>
-                    <img src="http://img2.wikia.nocookie.net/__cb20100420145532/starwars/images/a/a8/Lucksprite_tentacle_head.png" alt="" class="userPic"/>
+                    <img src="img/Icon-user.png" alt="" class="userPic"/>
 
                 </div>
 

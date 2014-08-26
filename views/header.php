@@ -13,5 +13,7 @@
     include('views/menu.php');
     ?>
     </div>
+    <a href="index.php?page=main">
     <img src="images/logo.png" alt="" class="logo"/>
+    </a>
 </header>
