@@ -653,3 +653,6 @@ body > main > section.messageSection.question > header > a > input[type="button"
     border: 1px solid #7A958C;
     border-radius: 5px;
 }
+#buttons > input[type="submit"]{
+    font-family: Helvetica, sans-serif;
+}
