@@ -52,6 +52,10 @@
             session_unset();
         }
 
+        function getGender(){
+            return $this->manager->getGenderByUserSessionKey(($_SESSION['sessionKey']));
+        }
+
         private function generateSessionKey($userId){
             $sessionKeyChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
             $sessionKey = $userId;

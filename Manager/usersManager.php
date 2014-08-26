@@ -61,7 +61,7 @@
         }
 
         function getUserBySessionKey($sessionKey){
-            $query = $this->pdo->prepare("SELECT id, username, first_name AS firstName, last_name AS lastName
+            $query = $this->pdo->prepare("SELECT id, username, first_name AS firstName, last_name AS lastName, email, isAdmin
                                           FROM users
                                           WHERE session_key LIKE :sessionKey");
             $query->bindParam(':sessionKey', $sessionKey);
@@ -72,6 +72,19 @@
                 return new User($data);
             }
             return null;
+        }
+
+        function getGenderByUserSessionKey($sessionKey){
+            $query = $this->pdo->prepare("SELECT gender.gender
+                                          FROM gender
+                                          JOIN users ON users.gender_id = gender.id;
+                                          WHERE session_key LIKE :sessionKey");
+            $query->bindParam(':sessionKey', $sessionKey);
+            $query->execute();
+
+            $data = $query->fetch();
+            //var_dump($data);
+            return $data;
         }
 
         function getUserByUsernameAndPassword($username, $password){

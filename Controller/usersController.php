@@ -97,6 +97,12 @@
         }
     }
 
+    function getGender(){
+        $userService = new UsersService();
+        return $userService->getGender();
+
+    }
+
     function logoutUser($userService){
         $userService->logoutUser();
         header("Location: index.php");

@@ -324,8 +324,9 @@ section > #aboutUser{
     border: 1px solid #DADCE2;
     margin-left: 3px;
     width: 833px;
-    padding: 25px;	
+    padding: 25px;
 	margin-left:217px;
+    min-height: 254px;
 }
 
 section > #aboutUser  li{
@@ -397,7 +398,7 @@ section > form > ul > #buttons{
     width: 250px;
     margin: 25px auto;
 }
-section > form > ul > #buttons > button, section > form > ul > #buttons > input{
+section > form > ul > #buttons > button, section > form > ul > #buttons > input ,  .messageSection > form > input, .messageSection > header > input{
     outline: none;
     margin: 5px;
     color: white;
@@ -407,7 +408,7 @@ section > form > ul > #buttons > button, section > form > ul > #buttons > input{
     width: 100px;
     height: 30px;
 }
-section > form > ul > #buttons > button:hover{
+section > form > ul > #buttons > button:hover,  .messageSection > form > input:hover, .messageSection > header > input:hover{
     background-color: rgba(43, 146, 114, 1);
     cursor: pointer;
 }
@@ -440,7 +441,7 @@ main > .messageSection{
     display: inline-block;
     width:900px;
     margin-left: 100px;
-    min-height: 200px;
+    min-height: 120px;
 }
 
 .messageSection .messageHolder h3, .messageHolder p{
@@ -507,7 +508,7 @@ footer{
     padding-left: 4px;
     outline: none;
 }
-#search > button {
+#search > button{
     border: 1px solid rgba(255,255,255,0.3);
     height: 20px;
     padding-left: 2px;
@@ -538,4 +539,20 @@ footer{
 #thumbs {
     width: 30px;
     height: 30px;
+}
+
+.messageSection > form{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.messageSection > form > textarea{
+    width: 98%;
+    height: 140px;
+}
+
+main > .question {
+    min-height: 230px;
 }

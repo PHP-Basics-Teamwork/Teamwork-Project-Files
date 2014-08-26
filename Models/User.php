@@ -18,6 +18,8 @@ class User {
 
     private $salt;
 
+    private $isAdmin;
+
     function __construct($userData = null) {
 
         if(isset($userData['id'])){
@@ -43,6 +45,9 @@ class User {
         }
         if(isset($userData['salt'])){
             $this->salt = $userData['salt'];
+        }
+        if(isset($userData['isAdmin'])){
+            $this->isAdmin = $userData['isAdmin'];
         }
 
     }
@@ -181,6 +186,14 @@ class User {
 
     public function generateNewSalt(){
         $this->salt = base_convert(sha1(uniqid(mt_rand(), true)), 16, 36);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isAdmin()
+    {
+        return $this->isAdmin;
     }
 
 
