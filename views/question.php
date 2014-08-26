@@ -100,7 +100,7 @@
 
         <form action="" method="POST">
             <textarea name="text"></textarea>
-            <input type="submit" value="ADD" name="addReply">
+            <input type="submit" value="ДОБАВИ" name="addReply">
         </form>
 
     </section>

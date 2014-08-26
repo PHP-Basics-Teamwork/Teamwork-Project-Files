@@ -18,16 +18,16 @@
 
     <section>
         <header>
-            <h1>USER INFORMATION</h1>
+            <h1>ИНФОРМАЦИЯ ЗА ПОТРЕБИТЕЛ</h1>
         </header>
 	   <ul id="basicinfo">
 		   <li><h4><?php echo $user->getUsername()?></h4></li>
 		   <li><h5 class="postition">
                    <?php
                     if ($user->isAdmin() == 1){
-                        echo "Administrator";
+                        echo "Администратор";
                     } else {
-                        echo "User";
+                        echo "Потребител";
                     }
                    ?>
                </h5></li>
@@ -36,9 +36,9 @@
 	   </ul>
         <div id="aboutUser">
             <ul>
-                <li><span class="profile-label">First name:</span> <?php echo $user->getFirstName()?></li>
-                <li><span class="profile-label">Last name: </span> <?php echo $user->getLastName()?></li>
-                <li><span class="profile-label">Gender: </span> <?php echo $user->getGender()?></li>
+                <li><span class="profile-label">Име:</span> <?php echo $user->getFirstName()?></li>
+                <li><span class="profile-label">Фамилия: </span> <?php echo $user->getLastName()?></li>
+                <li><span class="profile-label">Пол: </span> <?php echo $user->getGender()?></li>
                 <li><span class="profile-label">E-mail:</span> <?php echo $user->getEmail()?></li>
             </ul>
 
