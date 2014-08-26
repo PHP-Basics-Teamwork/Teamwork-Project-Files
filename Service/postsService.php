@@ -13,6 +13,9 @@ class PostsService{
         return $this->manager->getPosts();
     }
 
+    function getLatestPosts(){
+        return $this->manager->getLatestPosts();
+    }
 
     function changePost($id, $title, $text) {
         $this->manager->changePost($id, $title, $text);
@@ -36,5 +39,9 @@ class PostsService{
 
     function search($queryText){
         return $this->manager->search($queryText);
+    }
+
+    function deletePost($id){
+        $this->manager->deletePost($id);
     }
 }

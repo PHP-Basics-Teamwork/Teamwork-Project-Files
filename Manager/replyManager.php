@@ -30,7 +30,7 @@ class replyManager {
         $query = $this->pdo->prepare("SELECT *
                                           FROM replies
                                           JOIN users ON replies.user_id = users.id
-                                          WHERE post_id LIKE :id");
+                                          WHERE post_id LIKE :id ORDER BY replies.id ASC");
         $query->bindParam(':id', $id);
         $query->execute();
 
@@ -51,6 +51,12 @@ class replyManager {
         $query -> bindParam(':postId', $reply->getPostID());
         $query -> bindParam(':userId', $reply->getUserID());
 
+        $query->execute();
+
+        $query = $this->pdo->prepare("UPDATE posts
+                                          SET answers = answers + 1
+                                          WHERE id = :id");
+        $query->bindParam(':id', $reply->getPostID());
         $query->execute();
     }
     

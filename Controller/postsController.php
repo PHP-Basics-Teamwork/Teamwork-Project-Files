@@ -21,6 +21,12 @@
         }
     }
 
+
+    if(isset($_GET['action']) && $_GET['action']=="deletePost"){
+        $postsService->deletePost($_GET['id']);
+        header("Location: index.php");
+    }
+
     function getSearchResults($postsService){
         try{
             if(isset($_POST['search']) && strlen($_POST['search']) != 0){
@@ -37,6 +43,11 @@
     function getPosts($postsService){
         $allPosts = $postsService->getAllPosts();
         return $allPosts;
+    }
+
+    function getLatestPosts($postsService){
+        $posts = $postsService->getLatestPosts();
+        return $posts;
     }
 
     function getAllCategories($postsService){

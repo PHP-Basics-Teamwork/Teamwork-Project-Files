@@ -10,6 +10,8 @@ class Post {
 
     private $summary;
 
+    private $categoryName;
+
     private $categoryID;
 
     private $userID;
@@ -22,38 +24,45 @@ class Post {
 
     private $username;
 
+    private $date;
 
-    function __construct($userData = null) {
+    function __construct($postData = null) {
 
-        if(isset($userData['id'])){
-            $this->id = $userData['id'];
+        if(isset($postData['id'])){
+            $this->id = $postData['id'];
         }
-        if(isset($userData['title'])){
-            $this->title = $userData['title'];
+        if(isset($postData['title'])){
+            $this->title = htmlentities($postData['title']);
         }
-        if(isset($userData['text'])){
-            $this->text = $userData['text'];
+        if(isset($postData['text'])){
+            $this->text =  htmlentities($postData['text']);
         }
-        if(isset($userData['category_id'])){
-            $this->categoryID = $userData['category_id'];
+        if(isset($postData['categoryName'])){
+            $this->categoryName =  htmlentities($postData['categoryName']);
         }
-        if(isset($userData['user_id'])){
-            $this->userID = $userData['user_id'];
+        if(isset($postData['user_id'])){
+            $this->userID = $postData['user_id'];
         }
-        if(isset($userData['votes'])){
-            $this->votes = $userData['votes'];
+        if(isset($postData['votes'])){
+            $this->votes = $postData['votes'];
         }
-        if(isset($userData['answers'])){
-            $this->answers = $userData['answers'];
+        if(isset($postData['answers'])){
+            $this->answers = $postData['answers'];
         }
-        if(isset($userData['summary'])){
-            $this->summary = $userData['summary'];
+        if(isset($postData['summary'])){
+            $this->summary =  htmlentities($postData['summary']);
         }
-        if(isset($userData['best_answer_id'])){
-            $this->bestAnswerID = $userData['best_answer_id'];
+        if(isset($postData['best_answer_id'])){
+            $this->bestAnswerID = $postData['best_answer_id'];
         }
-        if(isset($userData['username'])){
-            $this->username = $userData['username'];
+        if(isset($postData['username'])){
+            $this->username =  htmlentities($postData['username']);
+        }
+        if(isset($postData['category_id'])){
+            $this->categoryID = $postData['category_id'];
+        }
+        if(isset($postData['date'])){
+            $this->date = $postData['date'];
         }
 
     }
@@ -133,18 +142,18 @@ class Post {
     /**
      * @return string
      */
-    public function getCategoryID()
+    public function getCategoryName()
     {
-        return $this->categoryID;
+        return $this->categoryName;
     }
 
     /**
-     * @param $categoryID
+     * @param $categoryName
      * @return Post
      */
-    public function setCategoryID($categoryID)
+    public function setCategoryName($categoryName)
     {
-        $this->categoryID = $categoryID;
+        $this->categoryName = $categoryName;
         return $this;
     }
 
@@ -230,7 +239,37 @@ class Post {
         return $this;
     }
 
+    /**
+     * @param $categoryID
+     */
+    public function setCategoryID($categoryID)
+    {
+        $this->categoryID = $categoryID;
+    }
 
+    /**
+     * @return ind
+     */
+    public function getCategoryID()
+    {
+        return $this->categoryID;
+    }
+
+    /**
+     * @param $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
+
+    /**
+     * @return date
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
 
 
 }

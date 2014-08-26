@@ -31,14 +31,14 @@
                     }
                    ?>
                </h5></li>
-		   <li><img src="resources/userPic.jpg" alt="userPic"></li>
-		   <li><div id="userstatus">Online</div></li>
+<!--		   <li><img src="resources/userPic.jpg" alt="userPic"></li>-->
+<!--		   <li><a href="#" class="showMore">Show Posts</a></li>-->
 	   </ul>
         <div id="aboutUser">
             <ul>
                 <li><span class="profile-label">First name:</span> <?php echo $user->getFirstName()?></li>
                 <li><span class="profile-label">Last name: </span> <?php echo $user->getLastName()?></li>
-                <li><span class="profile-label">Gender: </span> <?php echo /*$user->getGender()*/ "Male";?></li>
+                <li><span class="profile-label">Gender: </span> <?php echo $user->getGender()?></li>
                 <li><span class="profile-label">E-mail:</span> <?php echo $user->getEmail()?></li>
             </ul>
 

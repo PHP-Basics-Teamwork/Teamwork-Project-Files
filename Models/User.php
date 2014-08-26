@@ -26,19 +26,19 @@ class User {
             $this->id = $userData['id'];
         }
         if(isset($userData['username'])){
-            $this->username = $userData['username'];
+            $this->username =  htmlentities($userData['username']);
         }
         if(isset($userData['password'])){
             $this->password = $userData['password'];
         }
         if(isset($userData['email'])){
-            $this->email = $userData['email'];
+            $this->email =  htmlentities($userData['email']);
         }
         if(isset($userData['firstName'])){
-            $this->firstName = $userData['firstName'];
+            $this->firstName =  htmlentities($userData['firstName']);
         }
         if(isset($userData['lastName'])){
-            $this->lastName = $userData['lastName'];
+            $this->lastName =  htmlentities($userData['lastName']);
         }
         if(isset($userData['gender'])){
             $this->gender = $userData['gender'];

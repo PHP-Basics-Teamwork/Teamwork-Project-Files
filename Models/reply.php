@@ -11,6 +11,8 @@ class Reply {
     private $post_id;
 
     private $votes;
+
+    private $date;
     
     function __construct($replyData = null) {
 
@@ -18,7 +20,7 @@ class Reply {
             $this->id = $replyData['id'];
         }
         if(isset($replyData['text'])){
-            $this->text = $replyData['text'];
+            $this->text =  htmlentities($replyData['text']);
         }
         if(isset($replyData['user_id'])){
             $this->user_id = $replyData['user_id'];
@@ -29,7 +31,9 @@ class Reply {
         if(isset($replyData['votes'])){
             $this->votes = $replyData['votes'];
         }
-
+        if(isset($replyData['date'])){
+            $this->date = $replyData['date'];
+        }
     }
     
     /**
@@ -115,5 +119,22 @@ class Reply {
     {
         $this->votes = $votes;
     }
-    
+
+    /**
+     * @param $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+
 }

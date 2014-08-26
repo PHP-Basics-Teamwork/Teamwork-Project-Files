@@ -18,7 +18,11 @@
                 include 'views/registration.php';
                 break;
             case "user":
-                include 'views/user.php';
+                if(!$user){
+                    include 'views/login.php';
+                } else {
+                    include 'views/user.php';
+                }
                 break;
             case "main":
                 include "views/main.php";
@@ -30,7 +34,11 @@
                 include "views/error.php";
                 break;
             case "addPost":
-                include "views/addPost.php";
+                if(!$user){
+                    include 'views/login.php';
+                } else {
+                    include "views/addPost.php";
+                }
                 break;
             case "search":
                 include "views/searchPage.php";

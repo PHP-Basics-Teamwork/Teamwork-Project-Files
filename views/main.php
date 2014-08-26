@@ -4,9 +4,9 @@
     $categories = [];
     $allPosts = getPosts($postsService);
 
-    for ($i = 0; $i < count($allPosts); $i++) {
-        if (array_search(strtolower($allPosts[$i][5]), $categories) === false){
-            array_push($categories, strtolower($allPosts[$i][5]));
+    foreach ($allPosts as $post) {
+        if (array_search(strtolower($post->getCategoryName()), $categories) === false){
+            array_push($categories, strtolower($post->getCategoryName()));
         }
     }
 
@@ -29,7 +29,8 @@
 		</header>
 
         <?php
-            for ($i = count($allPosts) -1 ; $i >= count($allPosts) - 6; $i--) { ?>
+            $latestPosts = getLatestPosts($postsService);
+            foreach ($latestPosts as $post) { ?>
                 <article>
                     <table>
                         <tbody>
@@ -40,8 +41,8 @@
                             <td class="topicDescription">
                                 <table class="topicTable">
                                     <tbody>
-                                        <tr><td onclick="window.location='<?php echo "?page=question&id=" . $allPosts[$i][0]?>'"><?php echo $allPosts[$i][1]?></td></tr>
-                                        <tr><td><?php echo $allPosts[$i][6]?></td></tr>
+                                        <tr><td onclick="window.location='<?php echo "?page=question&id=" . $post->getId();?>'"><?php echo $post->getTitle();?></td></tr>
+                                        <tr><td><?php echo $post->getSummary();?></td></tr>
                                     </tbody>
 
                                 </table>
@@ -50,8 +51,7 @@
                             <td class="topicStats">
                                 <table class="statsTable">
                                     <tbody>
-                                    <tr><td><?php echo $allPosts[$i][7]?> answers</td></tr>
-                                    <tr><td><?php echo $allPosts[$i][4]?> votes</td></tr>
+                                    <tr><td><?php echo $post->getAnswers();?> answers</td></tr>
                                     </tbody>
                                 </table>
                             </td>
@@ -59,8 +59,8 @@
                             <td class="topicLastPost">
                                 <table class="lastPostTable">
                                     <tbody>
-                                    <tr><td><b><?php echo $allPosts[$i][3]?></b> in <span><?php echo $allPosts[$i][5]?></span></td></tr>
-                                    <tr><td>October 15, 2010, 07:34:09 AM</td></tr>
+                                    <tr><td><b><?php echo $post->getUsername();?></b> in <span><?php echo $post->getCategoryName();?></span></td></tr>
+                                    <tr><td><?php echo $post->getDate(); ?></td></tr>
                                     </tbody>
                                 </table>
                             </td>
@@ -78,9 +78,8 @@
                 </header>
 
                 <?php
-                for ($i = 0; $i < count($allPosts); $i++) {
-                    if (strtolower($allPosts[$i][5]) == $category): ?>
-
+                foreach ($allPosts as $post) {
+                    if (strtolower($post->getCategoryName()) == $category): ?>
                         <article>
                             <table>
                                 <tbody>
@@ -91,8 +90,8 @@
                                     <td class="topicDescription">
                                         <table class="topicTable">
                                             <tbody>
-                                            <tr><td onclick="window.location='<?php echo "?page=question&id=" . $allPosts[$i][0]?>'"><?php echo $allPosts[$i][1]?></td></tr>
-                                            <tr><td><?php echo $allPosts[$i][6]?></td></tr>
+                                            <tr><td onclick="window.location='<?php echo "?page=question&id=" . $post->getId()?>'"><?php echo $post->getTitle()?></td></tr>
+                                            <tr><td><?php echo $post->getSummary()?></td></tr>
                                             </tbody>
 
                                         </table>
@@ -101,8 +100,8 @@
                                     <td class="topicStats">
                                         <table class="statsTable">
                                             <tbody>
-                                            <tr><td><?php echo $allPosts[$i][7]?> answers</td></tr>
-                                            <tr><td><?php echo $allPosts[$i][4]?> votes</td></tr>
+                                            <tr><td><?php echo $post->getAnswers()?> answers</td></tr>
+
                                             </tbody>
                                         </table>
                                     </td>
@@ -110,8 +109,8 @@
                                     <td class="topicLastPost">
                                         <table class="lastPostTable">
                                             <tbody>
-                                            <tr><td><b><?php echo $allPosts[$i][3]?></b> in <span><?php echo $allPosts[$i][5]?></span></td></tr>
-                                            <tr><td>October 15, 2010, 07:34:09 AM</td></tr>
+                                            <tr><td><b><?php echo $post->getUsername()?></b> in <span><?php echo $post->getCategoryName();?></span></td></tr>
+                                            <tr><td><?php echo $post->getDate(); ?></td></tr>
                                             </tbody>
                                         </table>
                                     </td>

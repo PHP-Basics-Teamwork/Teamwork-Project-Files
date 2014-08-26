@@ -5,38 +5,24 @@
     if (isset($_GET['id'])){
         $postID = $_GET['id'];
     } else {
-        header("Location: ?page=error&error=Use the main page to see posts");
+        header("Location: ?page=main");
     }
 
+    $post = $postsService->getPostByIDAll($postID);
 
-    require_once('Controller/usersController.php');
-
-    $userService = new UsersService();
-    $isAdmin = false;
-    if(isset($_SESSION['sessionKey'])){
-        $user = $userService->getUserBySessionKey($_SESSION['sessionKey']);
-        if ($user->isAdmin() == 1){
-            $isAdmin = true;
-        }
+    if(!$post){
+        header("Location: ?page=main");
     }
-    else{
-        $user = null;
-    }
-
-    $postService = new PostsService();
-    $post = $postService->getPostByIDAll($postID);
-
-
-
     ?>
 
     <section class="messageSection question">
         <header>
             <h1 style="display: inline-block"><?php echo $post->getTitle()?></h1>
             <?php
-            if ($isAdmin == true){?>
-                <input type="button" onclick="deletePost()" value="Delete"  style="display: inline-block; float: right; width: auto"/>
-                <input type="button" onclick="deletePost()" value="Edit" style="display: inline-block;  float: right; width: auto" />
+            if (($user->isAdmin() !== null && $user->isAdmin()) || $post->getUserID() == $user->getId()){?>
+                <a href="index.php?action=deletePost&id=<?php echo $post->getId();?>">
+                    <input type="button"  value="Delete"  style="float: right;"/>
+                </a>
             <?php }?>
          </header>
 
@@ -87,7 +73,7 @@
         <section class="messageSection">
             <article>
                 <div class="userHolder">
-                    <h4><?php echo $reply[6]?></h4>
+                    <h4><?php echo $reply[7]?></h4>
                     <span></span>
                     <img src="http://img2.wikia.nocookie.net/__cb20100420145532/starwars/images/a/a8/Lucksprite_tentacle_head.png" alt="" class="userPic"/>
                     <span style="width:100px; text-align: left">Posts: 12</span>
@@ -95,7 +81,7 @@
 
                 <div class="messageHolder">
                     <h3><?php echo $post->getTitle()?></h3>
-                    <p>on <span>19-03-2006</span></p>
+                    <p>on <span><?php echo $reply[5]; ?></span></p>
                     <div class="message">
                         <p><?php echo $reply[1]?></p>
                     </div>

@@ -12,7 +12,8 @@ class PostsManager{
     }
 
     function getPosts(){
-        $query = $this->pdo->prepare("SELECT posts.id, posts.title, posts.text, users.username, posts.votes, categories.name, posts.summary, posts.answers
+        $query = $this->pdo->prepare("SELECT posts.id, posts.title, posts.text, users.username, posts.votes,
+                                          categories.name AS categoryName, posts.summary, posts.answers, posts.date
                                           FROM posts
                                           JOIN categories ON posts.category_id = categories.id
                                            JOIN users ON posts.user_id = users.id");
@@ -22,16 +23,36 @@ class PostsManager{
         $data = $query->fetchAll();
         $allPosts = [];
         foreach ($data as $post){
-            array_push($allPosts, $post);
+            array_push($allPosts, new Post($post));
+        }
+
+        return $allPosts;
+
+
+    }
+
+    function getLatestPosts(){
+        $query = $this->pdo->prepare("SELECT posts.id, posts.title, posts.text, users.username, posts.date,
+                                          categories.name AS categoryName, posts.summary, posts.answers
+                                          FROM posts
+                                          JOIN categories ON posts.category_id = categories.id
+                                          JOIN users ON posts.user_id = users.id
+                                           ORDER BY posts.id DESC LIMIT 5");
+
+        $query->execute();
+
+        $data = $query->fetchAll();
+        $allPosts = [];
+        foreach ($data as $post){
+            array_push($allPosts, new Post($post));
         }
 
         return $allPosts;
     }
 
-
-
     function getPostByIDAll($id) {
-        $query = $this->pdo->prepare("SELECT *
+        $query = $this->pdo->prepare("SELECT posts.id AS id, posts.title, posts.summary, posts.text, posts.answers,
+                                          users.username AS username, users.id AS user_id
                                           FROM posts
                                           JOIN users ON posts.user_id = users.id
                                           WHERE posts.id = :id");
@@ -71,6 +92,9 @@ class PostsManager{
     }
 
     function deletePost($id) {
+
+        $this->deleteAllRepliesOfPost($id);
+
         $query = $this->pdo->prepare("DELETE FROM posts
                                         WHERE id = :id");
         $query->bindParam(':id', $id);
@@ -123,5 +147,12 @@ class PostsManager{
         }
 
         return $allPosts;
+    }
+
+    private function deleteAllRepliesOfPost($postId) {
+        $query = $this->pdo->prepare("DELETE FROM replies
+                                        WHERE post_id = :postId");
+        $query->bindParam(':postId', $postId);
+        $query->execute();
     }
 }
