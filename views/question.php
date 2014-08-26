@@ -43,7 +43,6 @@
         </article>
 
 
-
     </section>
 
     <?php
