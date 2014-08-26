@@ -19,7 +19,7 @@
         <header>
             <h1 style="display: inline-block"><?php echo $post->getTitle()?></h1>
             <?php
-            if (($user->isAdmin() !== null && $user->isAdmin()) || $post->getUserID() == $user->getId()){?>
+            if (isset($user) && (($user->isAdmin() !== null && $user->isAdmin()) || $post->getUserID() == $user->getId())){?>
                 <a href="index.php?action=deletePost&id=<?php echo $post->getId();?>">
                     <input type="button"  value="Delete"  style="float: right;"/>
                 </a>
