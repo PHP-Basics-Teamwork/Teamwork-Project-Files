@@ -483,10 +483,14 @@ footer{
     float: right;
     margin-right:  35px;
 }
+#menu ul{
+    text-align: right;
+}
 #menu ul li{
     display: inline-block;
     text-transform: uppercase;
     margin-top: 13px;
+
 }
 #menu ul li a{
     text-decoration: none;
@@ -500,7 +504,7 @@ footer{
 }
 #search{
     margin-top: 10px;
-    margin-left: 140px;
+    margin-left: 80px;
 }
 #search > input{
     border: none;
