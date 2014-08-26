@@ -3,7 +3,7 @@
 
         <header id="login">
             <img src="img/login_sm.gif">
-            <h1>LOGIN</h1>
+            <h1>ВХОД</h1>
         </header>
 
         <article id="login-art">
