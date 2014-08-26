@@ -1,4 +1,5 @@
 <?php
+    mb_internal_encoding("UTF-8");
     require_once('Controller/usersController.php');
     require_once('Controller/postsController.php');
     require_once('Controller/repliesController.php');

@@ -9,6 +9,7 @@
             if(!$user){
                 throw new Exception('Не сте влезли в акаунта си!');
             }
+            validatePostData($_POST);
             $newPost = new Post($_POST);
             $newPost->setUserID($user->getId());
             $postsService->addPost($newPost);
@@ -55,13 +56,13 @@
     }
 
     function validatePostData($postData){
-        if(!isset($postData['title']) || strlen($postData['tile']) < 10){
+        if(!isset($postData['title']) || strlen($postData['title']) < 10){
             throw new Exception("Заглавието трябва да е поне 10 символа!", 400);
         }
-        if(!isset($postData['summary']) || $postData['summary'] < 10){
+        if(!isset($postData['summary']) || strlen($postData['summary']) < 10){
             throw new Exception("Резюмето трябва да е поне 10 символа!", 400);
         }
-        if(!isset($postData['text']) || $postData['text'] < 20){
+        if(!isset($postData['text']) || strlen($postData['text']) < 20){
             throw new Exception("Текства трябва да е поне 20 символа!", 400);
         }
         if(!isset($postData['category_id'])){
